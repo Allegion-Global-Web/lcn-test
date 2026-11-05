@@ -1,0 +1,17 @@
+{
+  "variantName": "hero-promo",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Brand promo banner: background photo with a large overlapping colored text panel (logo, heading, paragraphs, CTA) and a circular badge image",
+    "layout": "Panel spans the left ~75% and overlaps the top of a background photo anchored to the right; badge image sits at the panel's right edge",
+    "sourceSection": "All in One. Allegion."
+  },
+  "contentPattern": {
+    "structure": "row 1: background image; row 2: optional logo picture, heading (h2), paragraphs, CTA link, optional badge picture after the heading. The badge may also be a separate picture-only row"
+  },
+  "options": [],
+  "memberVariantIds": ["hero-promo"],
+  "usage": "Parent-brand or cross-promotion banner near the bottom of a page.",
+  "reuseGuidance": "Use when a text panel with logo overlaps a photo and carries a badge. For a top-of-page hero with a product cutout use hero-product."
+}

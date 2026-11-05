@@ -1,0 +1,17 @@
+{
+  "variantName": "hero-product",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Top-of-page brand banner: full-width photo background, large uppercase headline, intro copy, CTA button and a product cutout image overlapping the bottom edge",
+    "layout": "Text block top-left over background photo; product image centered below the text, extending past the block's bottom edge",
+    "sourceSection": "Hero - Taking Control"
+  },
+  "contentPattern": {
+    "structure": "row 1: background image; row 2: heading (h1), intro paragraph, CTA link, optional product image (picture). The product image may also be authored as its own picture-only cell"
+  },
+  "options": [],
+  "memberVariantIds": ["hero-product"],
+  "usage": "Homepage or landing page top hero with a featured product cutout.",
+  "reuseGuidance": "Use when the hero pairs a photo background with a product image that overlaps the following section. For a plain photo hero use hero; for an offset text panel with logo and badge use hero-promo."
+}

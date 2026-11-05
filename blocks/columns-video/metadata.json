@@ -1,0 +1,17 @@
+{
+  "variantName": "columns-video",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Brand story intro: text column (heading, subheading, paragraph, CTA) beside a video poster that plays an embedded video",
+    "layout": "Two equal columns on desktop, text left and video right; video stacks below the text on mobile; optional product image in the text cell floats over the column seam into the next band from 768px",
+    "sourceSection": "Why LCN"
+  },
+  "contentPattern": {
+    "structure": "one row, two cells: cell 1 heading, subheading, paragraph, CTA link; cell 2 poster image plus a YouTube/Vimeo link (the image may be linked directly). Without a video link the image renders as a plain image"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-video"],
+  "usage": "Text beside a click-to-play video.",
+  "reuseGuidance": "Use when one column is a video poster. For text beside a stat graphic use columns-stat; for a tiled grid use columns-mosaic."
+}

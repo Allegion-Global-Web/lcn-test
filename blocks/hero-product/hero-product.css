@@ -1,0 +1,193 @@
+/* hero-product: values from migration-work/hero-product-extracted.css + source breakpoint measurements */
+
+/* full-bleed: the photo spans the viewport, content keeps the source grid */
+.hero-product-container .hero-product-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-product {
+  position: relative;
+  overflow: visible;
+}
+
+.hero-product .hero-product-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-product .hero-product-background picture,
+.hero-product .hero-product-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.hero-product .hero-product-inner {
+  position: relative;
+  z-index: 1;
+  display: flow-root;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 11px 20px 19px;
+}
+
+.hero-product .hero-product-content {
+  max-width: 100%;
+}
+
+/* headline: white with a green accent line */
+.hero-product h1 {
+  margin: 20px 0 10px;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: var(--heading-line-height);
+}
+
+.hero-product .hero-product-accent {
+  color: var(--accent-color);
+}
+
+.hero-product p {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: var(--body-font-size-l);
+  line-height: var(--body-line-height);
+}
+
+/* green CTA ("Learn Our Story") */
+.hero-product p.hero-product-cta-wrapper {
+  display: flex;
+  margin: 0;
+}
+
+main .hero-product a.hero-product-cta:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 5px;
+  border: 1px solid transparent;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+  font-family: var(--ui-font-family);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: var(--button-line-height);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: var(--button-transition);
+}
+
+main .hero-product a.hero-product-cta:hover,
+main .hero-product a.hero-product-cta:focus-visible {
+  background-color: var(--accent-hover-color);
+  color: #000;
+  text-decoration: none;
+}
+
+/* product cutout: hidden on phones, overlaps the bottom edge from tablet up */
+.hero-product .hero-product-media {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .hero-product .hero-product-inner {
+    max-width: 750px;
+    padding: 0 0 20px 30px;
+  }
+
+  .hero-product .hero-product-content,
+  .hero-product .hero-product-media {
+    width: 345px;
+  }
+
+  .hero-product .hero-product-media {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    height: 0;
+  }
+
+  .hero-product .hero-product-media picture {
+    display: contents;
+  }
+
+  .hero-product .hero-product-media img {
+    position: absolute;
+    top: -155px;
+    left: 61%;
+    z-index: 1;
+    display: block;
+    width: 85%;
+    max-width: none;
+    height: auto;
+  }
+
+  main .hero-product a.hero-product-cta:any-link {
+    padding: 15px 20px;
+    font-size: var(--body-font-size-m);
+    line-height: 21px;
+  }
+}
+
+@media (width >= 900px) {
+  .hero-product h1 {
+    font-size: 115px;
+  }
+}
+
+@media (width >= 992px) {
+  .hero-product .hero-product-inner {
+    max-width: 970px;
+    padding: 40px 0 150px 15px;
+  }
+
+  .hero-product .hero-product-content,
+  .hero-product .hero-product-media {
+    width: 455px;
+  }
+
+  .hero-product .hero-product-media img {
+    left: 67%;
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-product .hero-product-inner {
+    max-width: 1360px;
+    padding-left: 40px;
+  }
+
+  .hero-product .hero-product-content,
+  .hero-product .hero-product-media {
+    width: 555px;
+  }
+
+  .hero-product .hero-product-media img {
+    top: -185px;
+    left: 61%;
+    width: 100%;
+  }
+
+  main .hero-product a.hero-product-cta:any-link {
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+  }
+}
+
+@media (width >= 1300px) {
+  .hero-product h1 {
+    font-size: 120px;
+  }
+}

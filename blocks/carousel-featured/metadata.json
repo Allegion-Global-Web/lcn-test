@@ -1,0 +1,17 @@
+{
+  "variantName": "carousel-featured",
+  "baseBlock": "carousel",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Featured product/news carousel: one slide visible at a time, each a panel with eyebrow, title, description and outlined CTA beside an image or infographic",
+    "layout": "Slide content left, image right on desktop (stacked on mobile); prev/next arrows on the sides; dot indicators below",
+    "sourceSection": "Featured Product Carousel"
+  },
+  "contentPattern": {
+    "structure": "cell 1: slide image (picture only); cell 2: optional eyebrow paragraph, title heading, description paragraph, CTA link. Cell order may be swapped; the picture-only cell is treated as the image"
+  },
+  "options": [],
+  "memberVariantIds": ["carousel-featured"],
+  "usage": "Rotating featured product updates or announcements below a hero.",
+  "reuseGuidance": "Use for side-by-side text and image slides. For full-bleed image slides with overlaid text use carousel."
+}

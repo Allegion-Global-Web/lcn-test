@@ -1,0 +1,17 @@
+{
+  "variantName": "cards-solutions",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Solution entry points: image cards with a two-line heading, description and a link to the solution page",
+    "layout": "Three equal columns on desktop, two on tablet, one on mobile; image on top, text below, set on a dark textured section",
+    "sourceSection": "Door Control Solutions"
+  },
+  "contentPattern": {
+    "structure": "cell 1: card image; cell 2: heading (two lines, e.g. 'Solutions by' / 'Market'), description paragraph, CTA link ('Go Now')"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-solutions"],
+  "usage": "Navigational cards splitting solutions by market, role or requirement.",
+  "reuseGuidance": "Use for image-top cards linking to category pages. For icon + label quick links use cards-icon-links."
+}

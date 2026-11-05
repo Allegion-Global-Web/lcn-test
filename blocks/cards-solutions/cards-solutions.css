@@ -1,0 +1,131 @@
+/* source: migration-work/cards-solutions-extracted.css + computed styles of .columnselector cards */
+.cards-solutions > ul {
+  list-style: none;
+  margin: 0 -15px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+/* card: transparent 1px frame that turns blue on hover */
+.cards-solutions > ul > li {
+  position: relative;
+  margin: 0 0 15px;
+  border: 1px solid transparent;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.cards-solutions > ul > li.cards-solutions-card-linked {
+  cursor: pointer;
+}
+
+.cards-solutions > ul > li:hover {
+  border-color: var(--brand-blue);
+}
+
+.cards-solutions .cards-solutions-card-image {
+  position: relative;
+  line-height: 0;
+}
+
+.cards-solutions .cards-solutions-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* mobile: source copy sits at 31px / 359px of a 390px viewport (its cards bleed 15px off-screen; ours don't) */
+.cards-solutions .cards-solutions-card-body {
+  padding: 10px 20px;
+  text-align: left;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.cards-solutions .cards-solutions-card-body h2 {
+  margin: 20px 0 10px;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: var(--heading-font-weight);
+  line-height: 30.8px;
+}
+
+.cards-solutions .cards-solutions-card-body .cards-solutions-accent {
+  color: var(--accent-color);
+}
+
+/* source paragraphs open with a <br>: 20px blank line above the copy */
+.cards-solutions .cards-solutions-card-body p {
+  margin: 0 0 10px;
+  padding-top: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cards-solutions .cards-solutions-card-body p + p {
+  padding-top: 0;
+}
+
+/* "Go Now": overlay on the image, revealed on card hover/focus */
+.cards-solutions .cards-solutions-card-image .cards-solutions-card-cta {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: rgb(76 187 233 / 40%);
+  line-height: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.cards-solutions > ul > li:hover .cards-solutions-card-cta,
+.cards-solutions > ul > li:focus-within .cards-solutions-card-cta {
+  opacity: 1;
+  pointer-events: all;
+}
+
+main .cards-solutions .cards-solutions-card-cta a:any-link {
+  display: block;
+  margin: 0;
+  border: 1px solid #fff;
+  border-radius: 0;
+  padding: 6px 30px;
+  background-color: transparent;
+  color: #fff;
+  font-family: var(--ui-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.3333px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  hyphens: auto;
+}
+
+main .cards-solutions .cards-solutions-card-cta a:hover,
+main .cards-solutions .cards-solutions-card-cta a:focus-visible {
+  border-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (width >= 768px) {
+  .cards-solutions > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-solutions .cards-solutions-card-body {
+    padding: 10px 15px;
+  }
+
+  .cards-solutions .cards-solutions-card-body h2 {
+    padding: 0;
+  }
+}

@@ -1,0 +1,272 @@
+/*
+ * carousel-featured: values from lcnclosers.com computed styles
+ * (.home-banner .carousel). Mobile first; desktop layout at 900px.
+ */
+
+/* section band behind the carousel: grey patent-drawing texture */
+main > .section.carousel-featured-container {
+  padding-top: 50px;
+  background-color: var(--light-color);
+  background-image: url('lcn-gray-drawing.jpg');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.carousel-featured {
+  position: relative;
+  font-family: var(--body-font-family);
+}
+
+.carousel-featured .carousel-featured-slides-container {
+  position: relative;
+}
+
+.carousel-featured .carousel-featured-slides,
+.carousel-featured .carousel-featured-slide-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-featured .carousel-featured-slides {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: scroll clip;
+  background-color: #122740;
+  background-image: var(--gradient-navy);
+}
+
+.carousel-featured .carousel-featured-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-featured .carousel-featured-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* caption */
+.carousel-featured .carousel-featured-slide-content {
+  order: 1;
+  align-self: stretch;
+  box-sizing: border-box;
+  padding: 40px 40px 40px 30px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  text-shadow: rgb(0 0 0 / 60%) 0 1px 2px;
+  opacity: 0.8;
+}
+
+.carousel-featured .carousel-featured-slide-content > * {
+  margin: 0 0 10px;
+}
+
+.carousel-featured .carousel-featured-slide-content p.carousel-featured-eyebrow {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.carousel-featured .carousel-featured-slide-content h1,
+.carousel-featured .carousel-featured-slide-content h2,
+.carousel-featured .carousel-featured-slide-content h3,
+.carousel-featured .carousel-featured-slide-content h4,
+.carousel-featured .carousel-featured-slide-content h5,
+.carousel-featured .carousel-featured-slide-content h6,
+.carousel-featured .carousel-featured-slide-content p.carousel-featured-subtitle {
+  margin: 0 0 10px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* description: clipped at 120px like the source .carousel-text */
+.carousel-featured .carousel-featured-slide-content p:not(.carousel-featured-eyebrow, .carousel-featured-subtitle, .carousel-featured-cta) {
+  box-sizing: border-box;
+  max-height: 120px;
+  margin: 0 0 5px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* outlined green CTA (authored as a plain link paragraph) */
+.carousel-featured .carousel-featured-slide-content p.carousel-featured-cta {
+  margin: 0;
+}
+
+main .carousel-featured .carousel-featured-cta a:any-link,
+main .carousel-featured .carousel-featured-cta a.button:any-link {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 15px 30px;
+  border: 1px solid var(--accent-color);
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--accent-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: var(--body-line-height);
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+main .carousel-featured .carousel-featured-cta a:hover,
+main .carousel-featured .carousel-featured-cta a:focus-visible {
+  background-color: var(--accent-color);
+  color: #000;
+  text-decoration: none;
+}
+
+/* product image */
+.carousel-featured .carousel-featured-slide-image {
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  line-height: 0;
+}
+
+.carousel-featured .carousel-featured-slide-image picture {
+  display: contents;
+}
+
+.carousel-featured .carousel-featured-slide-image img {
+  display: block;
+  box-sizing: border-box;
+  width: 80%;
+  height: auto;
+  padding: 20px;
+}
+
+/* dot indicators */
+.carousel-featured .carousel-featured-slide-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 0 0;
+  line-height: 0;
+}
+
+.carousel-featured .carousel-featured-slide-indicator {
+  margin: 0 5px;
+}
+
+.carousel-featured .carousel-featured-slide-indicator button {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #262626;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.carousel-featured .carousel-featured-slide-indicator button:disabled,
+.carousel-featured .carousel-featured-slide-indicator button:hover,
+.carousel-featured .carousel-featured-slide-indicator button:focus-visible {
+  opacity: 1;
+}
+
+/* prev/next arrows: navy circled arrows outside the panel, desktop only */
+.carousel-featured .carousel-featured-navigation-buttons {
+  display: none;
+}
+
+@media (width >= 900px) {
+  main > .section.carousel-featured-container {
+    padding-top: 190px;
+  }
+
+  .carousel-featured {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .carousel-featured .carousel-featured-slide {
+    flex-direction: row;
+    align-items: center;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .carousel-featured .carousel-featured-slide-content {
+    flex: 0 0 70%;
+    align-self: flex-start;
+    padding: 40px;
+  }
+
+  .carousel-featured .carousel-featured-slide-image {
+    flex: 0 0 30%;
+    max-width: none;
+    height: 100%;
+  }
+
+  .carousel-featured .carousel-featured-slide-image img {
+    width: 100%;
+  }
+
+  /*
+   * arrows sit 60px outside the panel, but like the source they are pulled in
+   * to stay inside the viewport when the side gutter is narrower (900-1260px);
+   * (100% - 100vw) / 2 is minus the gutter, +8px leaves room for a scrollbar
+   */
+  .carousel-featured .carousel-featured-navigation-buttons {
+    position: absolute;
+    top: 50%;
+    left: max(-60px, calc((100% - 100vw) / 2 + 8px));
+    right: max(-59px, calc((100% - 100vw) / 2 + 8px));
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  .carousel-featured .carousel-featured-navigation-buttons button {
+    width: 41px;
+    height: 41px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41 41'%3E%3Ccircle cx='20.5' cy='20.5' r='18' fill='none' stroke='%230e2742' stroke-width='5'/%3E%3Cpath d='M29 20.5H13m6.5-7-7 7 7 7' fill='none' stroke='%230e2742' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat transparent;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .carousel-featured .carousel-featured-navigation-buttons button.slide-next {
+    transform: scaleX(-1);
+  }
+}

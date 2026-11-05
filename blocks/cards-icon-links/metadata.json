@@ -1,0 +1,17 @@
+{
+  "variantName": "cards-icon-links",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Quick-links band: a row of small circular icons, each beside a short linked label",
+    "layout": "Items centered in one row (wrapping on small screens); icon left of a two-line label",
+    "sourceSection": "Quick Links"
+  },
+  "contentPattern": {
+    "structure": "cell 1: icon image; cell 2: link whose text is the label (e.g. 'Download Templates'). The icon becomes part of the same link"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-icon-links"],
+  "usage": "Utility/quick-access links (downloads, catalogs, contact) in a light band.",
+  "reuseGuidance": "Use for short icon + label links. For image cards with a description use cards-solutions or cards."
+}

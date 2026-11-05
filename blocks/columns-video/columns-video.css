@@ -1,0 +1,215 @@
+/*
+ * columns-video: "Why LCN" text column beside a click-to-play video poster.
+ * Values from lcnclosers.com computed styles (migration-work/columns-video-extracted.css).
+ * Source breakpoints: 768px (two columns), 1024px (desktop padding), 1426px / 1820px
+ * (product image offset), 1920px (wide padding).
+ */
+
+/* full-bleed: the source band spans the viewport, not the 1200px content column */
+main .section > .columns-video-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.columns-video > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* text column */
+.columns-video .columns-video-text {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 20px 70px;
+}
+
+.columns-video .columns-video-text h1 {
+  margin: 20px 0 10px;
+  color: var(--text-color);
+}
+
+.columns-video .columns-video-text h3 {
+  margin: 20px 0 10px;
+  color: var(--brand-blue);
+  font-size: var(--heading-font-size-l);
+  font-weight: 500;
+  line-height: var(--heading-line-height);
+}
+
+.columns-video .columns-video-text p {
+  margin: 0 0 10px;
+  font-size: var(--body-font-size-m);
+  line-height: 20px;
+}
+
+/* green "See Why" CTA (source: .button__default--green) */
+.columns-video .columns-video-text p.columns-video-cta {
+  display: flex;
+  align-items: flex-start;
+
+  /* source: text margin 10px + empty 20px paragraph + its 10px margin (collapses with the 10px above) */
+  margin: 40px 0 0;
+}
+
+main .columns-video .columns-video-cta a:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 5px;
+  border: 1px solid transparent;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+  font-family: var(--ui-font-family);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: var(--button-line-height);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: var(--button-transition);
+}
+
+main .columns-video .columns-video-cta a:hover,
+main .columns-video .columns-video-cta a:focus-visible {
+  background-color: var(--accent-hover-color);
+  color: #000;
+  text-decoration: none;
+}
+
+/* "LCN closer" product image: hidden on mobile, floats over the column seam
+   and into the next band from 768px (source: .home-video .cmp-image, z-index 99) */
+.columns-video .columns-video-text p.columns-video-product {
+  display: none;
+}
+
+/* video column */
+.columns-video .columns-video-media {
+  line-height: 0;
+}
+
+.columns-video .columns-video-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.columns-video .columns-video-poster {
+  position: relative;
+  cursor: pointer;
+}
+
+.columns-video .columns-video-play {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.columns-video .columns-video-frame {
+  position: relative;
+  aspect-ratio: 3426 / 2016;
+}
+
+.columns-video .columns-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*
+ * Product image geometry. On the source the image is positioned against an inner
+ * column that is 30px wider (two 15px gutters) and 50px shorter (bottom padding)
+ * than .columns-video-text, so the source percentages are re-based here:
+ *   width  70% of (W + 30)  -> 70% + 21px
+ *   right -30% of (W + 30) - 15px  -> -30% - 24px
+ *   height 70% of (H - 50)  -> 70% - 35px
+ *   bottom -N% of (H - 50) - 50px  -> (N * 50px + 50px) - N%
+ */
+@media (width >= 768px) {
+  .columns-video > div {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .columns-video > div > div {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .columns-video .columns-video-text {
+    align-self: flex-start;
+    padding: 20px 20px 70px;
+  }
+
+  .columns-video .columns-video-text p.columns-video-product {
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    line-height: 0;
+    pointer-events: none;
+  }
+
+  .columns-video .columns-video-product img {
+    width: auto;
+    height: auto;
+    transition: opacity 0.3s;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .columns-video .columns-video-text p.columns-video-product {
+    right: calc(-30% - 24px);
+    bottom: calc(70px - 40%);
+    width: calc(70% + 21px);
+    height: calc(70% - 35px);
+  }
+
+  .columns-video .columns-video-product img {
+    width: 100%;
+  }
+
+  .columns-video .columns-video-media img {
+    height: 440px;
+  }
+}
+
+@media (width >= 1024px) {
+  .columns-video .columns-video-text {
+    padding: 50px 30px 50px 83px;
+  }
+}
+
+@media (width > 1024px) {
+  .columns-video .columns-video-text p.columns-video-product {
+    right: -218px;
+    bottom: calc(87.5px - 75%);
+    width: 419px;
+    height: 419px;
+  }
+}
+
+@media (width >= 1426px) and (width < 1820px) {
+  .columns-video .columns-video-text p.columns-video-product {
+    bottom: calc(95px - 90%);
+  }
+}
+
+@media (width >= 1920px) {
+  .columns-video .columns-video-text {
+    padding: 115px 80px 50px 393px;
+  }
+}

@@ -1,0 +1,214 @@
+/*
+ * hero-promo ("All in One. Allegion.")
+ * Source: lcnclosers.com experience fragment .alle-over-bg
+ * (computed styles: migration-work/hero-promo-extracted.css).
+ * Source breakpoints: 768px (two columns), 1010px (photo overlap), 1201px (56px heading).
+ */
+
+/* full-bleed: the promo spans the viewport (max 1600px) like the source */
+.hero-promo-container .hero-promo-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-promo {
+  position: relative;
+  color: var(--text-color);
+}
+
+/* office photo only shows beside the orange card on desktop */
+.hero-promo .hero-promo-background {
+  display: none;
+}
+
+.hero-promo .hero-promo-background picture,
+.hero-promo .hero-promo-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* orange card: source exp-background.jpg (#f36f24 -> #f29e20), cover-cropped per breakpoint */
+.hero-promo .hero-promo-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  /* 30px container padding + 31px empty spacer above the logo */
+  padding: 61px 30px 30px;
+  background-color: #f36f24;
+  background-image: linear-gradient(140deg, #f36f24 23%, #f38c22 100%);
+}
+
+.hero-promo .hero-promo-card > :last-child {
+  margin-bottom: 0;
+}
+
+.hero-promo .hero-promo-logo {
+  margin: 0;
+  line-height: 0;
+}
+
+.hero-promo .hero-promo-logo img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.hero-promo h1,
+.hero-promo h2,
+.hero-promo h3 {
+  margin: 20px 0 10px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+
+  /* source computes 700 but ships no Poppins 700 face, so it renders the 800 face */
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-promo p {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: var(--body-font-size-l);
+  line-height: var(--body-line-height);
+}
+
+/* CTA: solid black button (source .alle-core-btn-link) */
+.hero-promo p.hero-promo-cta {
+  display: flex;
+  margin: 0;
+}
+
+main .hero-promo .hero-promo-cta a:any-link,
+main .hero-promo .hero-promo-card a.button:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 5px;
+  border: 1px solid #000;
+  border-radius: var(--button-border-radius);
+  padding: 15px 27px;
+  background-color: #000;
+  color: #fff;
+  font-family: var(--ui-font-family);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: 1.3333;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: normal;
+  transition: 0.3s;
+}
+
+main .hero-promo .hero-promo-cta a:hover,
+main .hero-promo .hero-promo-cta a:focus-visible,
+main .hero-promo .hero-promo-card a.button:hover,
+main .hero-promo .hero-promo-card a.button:focus-visible {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.hero-promo .hero-promo-badge {
+  line-height: 0;
+  text-align: center;
+}
+
+.hero-promo .hero-promo-badge picture {
+  display: inline-block;
+}
+
+.hero-promo .hero-promo-badge img {
+  display: block;
+  width: auto;
+  max-height: 175px;
+}
+
+/* tablet: two equal columns on the orange card (source col-sm-6) */
+@media (width >= 768px) {
+  .hero-promo .hero-promo-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    background-image: linear-gradient(140deg, #f36f24 32%, #f39522 100%);
+  }
+
+  .hero-promo .hero-promo-card {
+    flex: 0 0 calc(50% - 15px);
+    min-width: 0;
+  }
+
+  .hero-promo .hero-promo-badge {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: start;
+  }
+
+  .hero-promo .hero-promo-badge img {
+    max-height: none;
+  }
+}
+
+/* desktop: orange card overlaps the office photo, which drops 100px and starts at 25% */
+@media (width >= 1010px) {
+  .hero-promo {
+    max-width: 1600px;
+    margin: 75px auto 150px;
+    overflow-x: clip;
+  }
+
+  .hero-promo .hero-promo-background {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 25%;
+    z-index: 0;
+    width: 100%;
+    max-width: 1114px;
+    height: 100%;
+  }
+
+  .hero-promo .hero-promo-inner {
+    /* card is as wide as the photo and sits 39% of that width left of it */
+    left: calc(25% - min(100%, 1114px) * 0.39);
+    width: min(100%, 1114px);
+    gap: 0;
+    padding: 81px 17px 50px 22px;
+    background-image: linear-gradient(140deg, #f36f24 37%, #f29e20 100%);
+  }
+
+  .hero-promo .hero-promo-card {
+    /* source: col-sm-6 at width 60%, shifted 210px (15px gutters) */
+    flex: 0 0 calc((100% + 30px) * 0.6 - 30px);
+    margin-left: 210px;
+  }
+
+  .hero-promo .hero-promo-badge {
+    /* source: second column shifted 284px right and 20px down */
+    position: relative;
+    top: 20px;
+    flex: 0 0 auto;
+    margin-left: 104px;
+  }
+
+  .hero-promo.no-image .hero-promo-inner {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (width >= 1201px) {
+  .hero-promo h1,
+  .hero-promo h2,
+  .hero-promo h3 {
+    font-size: 56px;
+  }
+}

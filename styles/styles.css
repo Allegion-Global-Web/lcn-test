@@ -1,3 +1,5 @@
+@import url('brand.css');
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -10,40 +12,15 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+/* design tokens live in brand.css */
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
-}
-
-/* fallback fonts */
+/* fallback fonts (metric overrides keep layout stable until web fonts load) */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
+  font-family: poppins-fallback;
+  size-adjust: 112.16%;
+  ascent-override: 93.62%;
+  descent-override: 31.21%;
+  line-gap-override: 8.92%;
   src: local('Arial');
 }
 
@@ -53,23 +30,6 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
-}
-
 body {
   display: none;
   margin: 0;
@@ -77,7 +37,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: var(--body-line-height);
 }
 
 body.appear {
@@ -98,21 +58,26 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
+/* default content typography (source: migration-work/default-content-extracted.css) */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+}
+
 h2 { font-size: var(--heading-font-size-xl); }
 h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
@@ -125,8 +90,8 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 code,
@@ -143,7 +108,7 @@ pre {
 }
 
 main > div {
-  margin: 40px 16px;
+  margin: var(--section-spacing) 16px;
 }
 
 input,
@@ -160,122 +125,116 @@ a:any-link {
   overflow-wrap: break-word;
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
   color: var(--link-hover-color);
   text-decoration: underline;
 }
 
-/* buttons */
+/* buttons: EDS reset, then authored variants (strong = primary, em = secondary, both = accent) */
+main .button-container {
+  display: inline;
+}
+
+main a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: var(--link-color);
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  white-space: normal;
+}
+
 p.button-wrapper {
   margin: 12px 0;
 }
 
-a.button:any-link,
+main a.button.primary:any-link,
+main a.button.secondary:any-link,
+main a.button.accent:any-link,
 button.button {
   box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   max-width: 100%;
   margin: 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
-  font-weight: 500;
-  line-height: 1.25;
+  border: 1px solid transparent;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  font-family: var(--ui-font-family);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: var(--button-line-height);
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: var(--button-transition);
 }
 
-a.button[aria-disabled="true"],
-button.button:disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-a.button.primary,
+/* green filled CTA ("Learn Our Story", "See Why") */
+main a.button.primary:any-link,
 button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+  border-color: transparent;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
 }
 
-a.button.primary:hover,
-a.button.primary:focus-visible,
+main a.button.primary:hover,
+main a.button.primary:focus-visible,
 button.button.primary:hover,
 button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  background-color: var(--accent-hover-color);
+  color: #000;
+  text-decoration: none;
 }
 
-a.button.primary[aria-disabled="true"],
-a.button.primary[aria-disabled="true"]:hover,
-a.button.primary[aria-disabled="true"]:focus-visible,
-button.button.primary:disabled,
-button.button.primary:disabled:hover,
-button.button.primary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-a.button.secondary,
+/* outlined blue CTA ("Newsletter Signup", "Contact Us") */
+main a.button.secondary:any-link,
 button.button.secondary {
-  border-color: var(--text-color);
+  border-color: var(--brand-blue);
+  padding: 12px 20px;
   background-color: transparent;
-  color: var(--text-color);
+  color: var(--brand-blue);
+  line-height: 1.3333;
 }
 
-a.button.secondary:hover,
-a.button.secondary:focus-visible,
+main a.button.secondary:hover,
+main a.button.secondary:focus-visible,
 button.button.secondary:hover,
 button.button.secondary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--light-color);
-  color: var(--dark-color);
+  background-color: var(--brand-blue);
+  color: #fff;
+  opacity: 0.75;
+  text-decoration: none;
 }
 
-a.button.secondary[aria-disabled="true"],
-a.button.secondary[aria-disabled="true"]:hover,
-a.button.secondary[aria-disabled="true"]:focus-visible,
-button.button.secondary:disabled,
-button.button.secondary:disabled:hover,
-button.button.secondary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-/* high-impact call-to-action */
-a.button.accent,
+/* solid dark CTA ("Learn more at us.allegion.com"); no hover change on source */
+main a.button.accent:any-link,
 button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
 }
 
-a.button.accent:hover,
-a.button.accent:focus-visible,
+main a.button.accent:hover,
+main a.button.accent:focus-visible,
 button.button.accent:hover,
 button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
+  color: #fff;
+  text-decoration: none;
 }
 
-a.button.accent[aria-disabled="true"],
-a.button.accent[aria-disabled="true"]:hover,
-a.button.accent[aria-disabled="true"]:focus-visible,
-button.button.accent:disabled,
-button.button.accent:disabled:hover,
-button.button.accent:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+main a.button[aria-disabled="true"],
+button.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  pointer-events: none;
 }
 
 main img {
@@ -295,31 +254,130 @@ main img {
   width: 100%;
 }
 
-/* sections */
+/*
+ * sections: source bands sit flush against each other and the footer (no gaps).
+ * flow-root keeps child margins (headings, hero-promo block) inside the band
+ * instead of collapsing through into white gaps.
+ */
 main > .section {
-  margin: 40px 0;
+  display: flow-root;
+  margin: 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin: auto;
-  padding: 0 24px;
-}
-
-main > .section:first-of-type {
-  margin-top: 0;
-}
-
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
+  padding: 0 var(--content-padding);
 }
 
 /* section metadata */
 main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
+main .section.highlight,
+main .section.light-grey {
+  display: flow-root;
   margin: 0;
-  padding: 40px 0;
+  padding: 30px 0;
+  background-color: var(--light-color);
+}
+
+/* blueprint-texture navy band: white text, green accents; source insets 0 / 100px top (768) / 150px 0 50px (1024) */
+main .section.dark-blue {
+  display: flow-root;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-color);
+  background-image: url('images/lcn-blue-drawing.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+main .section.dark-blue h1,
+main .section.dark-blue h2,
+main .section.dark-blue h3,
+main .section.dark-blue h4,
+main .section.dark-blue h5,
+main .section.dark-blue h6,
+main .section.dark-blue a:any-link {
+  color: #fff;
+}
+
+main .section.dark-blue a:hover,
+main .section.dark-blue a:focus-visible {
+  color: var(--accent-color);
+}
+
+/* outlined button on navy ("Go Now"): white outline, green outline on hover */
+main .section.dark-blue a.button.secondary:any-link {
+  border-color: #fff;
+  color: #fff;
+}
+
+main .section.dark-blue a.button.secondary:hover,
+main .section.dark-blue a.button.secondary:focus-visible {
+  border-color: var(--accent-color);
+  background-color: transparent;
+  color: #fff;
+  opacity: 1;
+}
+
+/* section title sits 61px above the cards: the source follows it with an empty h3 (20 + 31 + 10) */
+main .section.dark-blue .default-content-wrapper > h3:last-child {
+  margin-bottom: 61px;
+}
+
+main .section.centered .default-content-wrapper {
+  text-align: center;
+}
+
+/*
+ * centered statement band ("PRECISION MATTERS."): 50px top inset, 1140px
+ * column, title followed by a 3px light-grey rule and 20px before the stats
+ */
+main .section.centered:not(.dark-blue) {
+  padding-top: 50px;
+}
+
+main .section.centered:not(.dark-blue) > .default-content-wrapper {
+  max-width: 1140px;
+  padding-bottom: 20px;
+}
+
+main .section.centered:not(.dark-blue) > .default-content-wrapper::after {
+  content: '';
+  display: block;
+  height: 3px;
+  margin: 10px 5%;
+  background-color: var(--light-color);
+}
+
+main .section.centered:not(.dark-blue) .default-content-wrapper h2 {
+  padding: 0 10px;
+  color: var(--heading-color);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+@media (width >= 768px) {
+  main .section.dark-blue {
+    padding-top: 100px;
+  }
+
+  main .section.centered:not(.dark-blue) .default-content-wrapper h2 {
+    padding: 0 30px;
+    font-size: 4.2vw;
+  }
+}
+
+@media (width >= 900px) {
+  main .section.centered:not(.dark-blue) > .default-content-wrapper::after {
+    margin-inline: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  main .section.dark-blue {
+    padding: 150px 0 50px;
+  }
 }

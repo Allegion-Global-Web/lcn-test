@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "lcn-test": {
+      "previewOrg": "allegion-global-web",
+      "previewSite": "lcn-test",
+      "contentHostUrl": "https://content.da.live/allegion-global-web/lcn-test/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

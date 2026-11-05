@@ -1,0 +1,116 @@
+/* image mosaic (source: .columnselector.home_img--hover) */
+.columns-mosaic .columns-mosaic-row {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.columns-mosaic .columns-mosaic-tile {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* photo and video tiles: a tinted backdrop under a semi-transparent image */
+.columns-mosaic .columns-mosaic-tile-image,
+.columns-mosaic .columns-mosaic-tile-video {
+  align-self: start;
+  line-height: 0;
+}
+
+.columns-mosaic .columns-mosaic-tile-image p,
+.columns-mosaic .columns-mosaic-tile-video p {
+  margin: 0;
+}
+
+.columns-mosaic .columns-mosaic-tile-image picture,
+.columns-mosaic .columns-mosaic-tile-video picture {
+  display: block;
+}
+
+.columns-mosaic .columns-mosaic-tile-image img,
+.columns-mosaic .columns-mosaic-tile-video img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.columns-mosaic .columns-mosaic-row > .columns-mosaic-tile:nth-child(1) {
+  background-color: rgb(87 94 107);
+}
+
+.columns-mosaic .columns-mosaic-row > .columns-mosaic-tile:nth-child(1) img {
+  opacity: 0.51;
+}
+
+.columns-mosaic .columns-mosaic-row > .columns-mosaic-tile:nth-child(2) {
+  background-color: rgb(10 127 235);
+}
+
+.columns-mosaic .columns-mosaic-row > .columns-mosaic-tile:nth-child(2) img {
+  opacity: 0.8;
+  transition: transform 1s;
+}
+
+.columns-mosaic .columns-mosaic-row > .columns-mosaic-tile-wide:nth-child(n) {
+  background-color: var(--brand-blue);
+}
+
+/* row hover: full-opacity images, zoom on the second tile */
+.columns-mosaic .columns-mosaic-row:hover .columns-mosaic-tile img {
+  opacity: 1;
+}
+
+.columns-mosaic .columns-mosaic-row:hover > .columns-mosaic-tile:nth-child(2) img {
+  transform: scale(1.1);
+}
+
+.columns-mosaic .columns-mosaic-tile-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/* text tile ("A Shared Commitment") */
+.columns-mosaic .columns-mosaic-row > .columns-mosaic-tile-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 127.4px 0;
+  background-color: var(--dark-color);
+  color: #fff;
+  text-align: center;
+}
+
+.columns-mosaic .columns-mosaic-row:hover > .columns-mosaic-tile-text {
+  background-color: rgb(33 105 136);
+}
+
+.columns-mosaic .columns-mosaic-tile-text h2 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 53px;
+  text-align: center;
+}
+
+@media (width >= 900px) {
+  .columns-mosaic {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .columns-mosaic .columns-mosaic-row {
+    grid-template-columns: repeat(var(--mosaic-cols, 3), minmax(0, 1fr));
+  }
+
+  .columns-mosaic .columns-mosaic-tile-wide {
+    grid-column: span var(--tile-span, 1);
+  }
+}
+
+@media (width >= 900px) and (width < 1280px) {
+  .columns-mosaic .columns-mosaic-row > .columns-mosaic-tile-text {
+    padding: 58.8px 0;
+  }
+}

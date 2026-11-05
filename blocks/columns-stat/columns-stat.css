@@ -1,0 +1,78 @@
+/*
+ * columns-stat: statement text beside a stat graphic.
+ * Values from source computed styles (lcnclosers.com "Precision Matters" imageText).
+ * Mobile: graphic stacked above the text; desktop: text left, graphic right.
+ */
+
+.columns-stat {
+  padding-bottom: 15px;
+}
+
+.columns-stat > div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+}
+
+.columns-stat > div > div {
+  box-sizing: border-box;
+}
+
+.columns-stat .columns-stat-text {
+  padding: 10px 35px;
+  color: #000;
+  text-align: left;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.columns-stat .columns-stat-text p {
+  margin: 0 0 10px;
+  font-size: 26.6667px;
+  line-height: 38.0952px;
+}
+
+.columns-stat .columns-stat-graphic {
+  order: -1;
+  line-height: 0;
+}
+
+.columns-stat .columns-stat-graphic p {
+  margin: 0;
+}
+
+.columns-stat .columns-stat-graphic a {
+  display: block;
+}
+
+.columns-stat .columns-stat-graphic img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (width >= 900px) {
+  .columns-stat {
+    padding-inline: 30px;
+  }
+
+  .columns-stat > div {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .columns-stat > div > div {
+    flex: 0 0 50%;
+    min-width: 0;
+  }
+
+  .columns-stat .columns-stat-text {
+    padding: 10px 15px;
+  }
+
+  .columns-stat .columns-stat-graphic {
+    order: 0;
+  }
+}

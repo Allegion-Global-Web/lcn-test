@@ -1,0 +1,17 @@
+{
+  "variantName": "columns-mosaic",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Image mosaic: a fixed grid mixing photo tiles, a video link tile (play icon + title) and solid-color text tiles",
+    "layout": "Three-column grid on desktop with two rows; a row with fewer cells widens its last tile to fill the row; single column on mobile",
+    "sourceSection": "Precision Matters"
+  },
+  "contentPattern": {
+    "structure": "rows of up to three cells; each cell is one tile: a picture only (photo tile), a play icon plus a YouTube/Vimeo link (video tile), or heading/paragraph text (text tile). E.g. row 1: video tile | wide photo; row 2: photo | photo | 'A Shared Commitment' text"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-mosaic"],
+  "usage": "Visual brand/product showcase grid with a video entry point.",
+  "reuseGuidance": "Use for a fixed tile grid of mixed media. For repeating look-alike cards use a cards block."
+}
