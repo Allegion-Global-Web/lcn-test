@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.lcnclosers.com/en/index.html",
+  "path": "index",
+  "timestamp": "2026-11-05T09:37:57.910Z",
+  "title": "LCN | Commercial Mechanical Door Closers & Door Control Solutions",
+  "template": "index",
+  "blocks": [
+    "hero-product",
+    "carousel-featured",
+    "cards-icon-links",
+    "columns-video",
+    "cards-solutions",
+    "columns-stat",
+    "columns-mosaic",
+    "columns-mosaic",
+    "hero-promo"
+  ]
+}
