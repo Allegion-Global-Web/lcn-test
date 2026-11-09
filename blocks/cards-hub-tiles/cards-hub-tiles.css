@@ -1,0 +1,165 @@
+/*
+ * cards-hub-tiles: full-width horizontal tiles (source: solutions.html
+ * .imageText.hubpage__tiles--view). Values measured from source computed styles.
+ * Mobile: full-bleed tile, 337x275 photo centred 15px below the tile top, copy below.
+ * >= 900px: 275px tall tile, copy on the left (~51%), natural-width photo flush right.
+ * Hover: tile darkens to rgb(38 38 38) and the photo zooms to 1.1 (0.3s).
+ */
+.cards-hub-tiles > ul {
+  list-style: none;
+
+  /* padding (not margin) so the gap below default content does not collapse: 45px from the intro copy on mobile, 30px from 900px */
+  margin: 0 0 5px;
+  padding: 35px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards-hub-tiles > ul > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  /* source tiles bleed past the 15px container gutter on small screens */
+  margin: 0 calc(-1 * var(--content-padding));
+  background-color: rgb(40 40 35 / 80%);
+  color: #fff;
+}
+
+.cards-hub-tiles > ul > li:hover {
+  background-color: rgb(38 38 38);
+}
+
+.cards-hub-tiles .cards-hub-tiles-tile-image {
+  padding-top: 15px;
+  overflow: hidden;
+  line-height: 0;
+  text-align: center;
+}
+
+.cards-hub-tiles .cards-hub-tiles-tile-image picture {
+  display: block;
+}
+
+.cards-hub-tiles .cards-hub-tiles-tile-image img {
+  display: block;
+  width: 337px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.cards-hub-tiles > ul > li:hover .cards-hub-tiles-tile-image img {
+  transform: scale(1.1);
+}
+
+.cards-hub-tiles .cards-hub-tiles-tile-body {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.cards-hub-tiles .cards-hub-tiles-tile-body h1,
+.cards-hub-tiles .cards-hub-tiles-tile-body h2,
+.cards-hub-tiles .cards-hub-tiles-tile-body h3,
+.cards-hub-tiles .cards-hub-tiles-tile-body h4 {
+  margin: 20px 0 10px;
+  padding-right: 10px;
+  color: #fff;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 500;
+  line-height: var(--heading-line-height);
+}
+
+/* source tile titles are links and render in the global link face (Roboto 400), not the heading face */
+.cards-hub-tiles .cards-hub-tiles-tile-body h1 a,
+.cards-hub-tiles .cards-hub-tiles-tile-body h2 a,
+.cards-hub-tiles .cards-hub-tiles-tile-body h3 a,
+.cards-hub-tiles .cards-hub-tiles-tile-body h4 a {
+  font-family: var(--ui-font-family);
+  font-weight: 400;
+}
+
+.cards-hub-tiles .cards-hub-tiles-tile-body p {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+.cards-hub-tiles a.cards-hub-tiles-tile-link:any-link,
+.cards-hub-tiles a.cards-hub-tiles-tile-link:hover,
+.cards-hub-tiles a.cards-hub-tiles-tile-link:focus-visible {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* stretch the tile link over the whole tile */
+.cards-hub-tiles a.cards-hub-tiles-tile-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.cards-hub-tiles a.cards-hub-tiles-tile-link:focus-visible {
+  outline: none;
+}
+
+.cards-hub-tiles > ul > li:has(a.cards-hub-tiles-tile-link:focus-visible) {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+@media (width >= 900px) {
+  .cards-hub-tiles > ul {
+    padding-top: 20px;
+    gap: 5px;
+  }
+
+  .cards-hub-tiles > ul > li {
+    flex-direction: row;
+    align-items: center;
+    min-height: 275px;
+    margin: 0;
+  }
+
+  .cards-hub-tiles .cards-hub-tiles-tile-body {
+    order: 1;
+
+    /* source copy column: 585px of a 1140px tile */
+    flex: 0 1 51.35%;
+    padding: 30px;
+  }
+
+  .cards-hub-tiles .cards-hub-tiles-tile-body h1,
+  .cards-hub-tiles .cards-hub-tiles-tile-body h2,
+  .cards-hub-tiles .cards-hub-tiles-tile-body h3,
+  .cards-hub-tiles .cards-hub-tiles-tile-body h4 {
+    padding-right: 0;
+  }
+
+  .cards-hub-tiles .cards-hub-tiles-tile-image {
+    order: 2;
+    flex: 0 0 337px;
+    align-self: stretch;
+    margin-left: auto;
+    padding-top: 0;
+  }
+
+  .cards-hub-tiles .cards-hub-tiles-tile-image picture {
+    height: 100%;
+  }
+
+  .cards-hub-tiles .cards-hub-tiles-tile-image img {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    min-height: 275px;
+  }
+}

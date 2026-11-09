@@ -1,0 +1,82 @@
+/*
+ * columns-brands: white box (max 1085px, 30px above/below) holding equal brand
+ * columns; each column centers a (linked) logo above centered copy and turns
+ * green on hover. Below 1115px the box runs edge to edge like the source.
+ * Columns stack below 768px (source breakpoint); from 768px they sit side by
+ * side, 400px tall, split by a 1px light-grey rule.
+ */
+.columns-brands {
+  margin: 30px calc(-1 * var(--content-padding));
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.columns-brands > .columns-brands-row {
+  display: flex;
+  flex-direction: column;
+}
+
+/* bottom inset includes the source's trailing empty paragraph (20px + 10px) */
+.columns-brands .columns-brands-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30px 15px 60px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.columns-brands .columns-brands-brand:hover {
+  background-color: var(--accent-color);
+}
+
+.columns-brands .columns-brands-brand p {
+  margin: 0 0 10px;
+  font-size: var(--body-font-size-m);
+  line-height: 20px;
+  text-align: center;
+}
+
+.columns-brands .columns-brands-brand .columns-brands-logo {
+  margin: 0 0 45px;
+  line-height: 0;
+}
+
+.columns-brands .columns-brands-logo a {
+  display: block;
+}
+
+/* source caps the logos at 51px tall (Schlage 235x51, Von Duprin 319x38) */
+.columns-brands .columns-brands-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 51px;
+}
+
+@media (width >= 768px) {
+  .columns-brands > .columns-brands-row {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .columns-brands .columns-brands-brand {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 400px;
+    padding: 80px 15px 45px;
+  }
+
+  .columns-brands .columns-brands-brand:not(:last-child) {
+    border-right: 1px solid var(--light-color);
+  }
+}
+
+@media (width >= 1115px) {
+  .columns-brands {
+    max-width: 1085px;
+    margin: 30px auto;
+  }
+}

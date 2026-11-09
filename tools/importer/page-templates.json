@@ -152,6 +152,71 @@
           "defaultContent": []
         }
       ]
+    },
+    {
+      "name": "solutions",
+      "urls": [
+        "https://www.lcnclosers.com/en/solutions.html"
+      ],
+      "representativeUrl": "https://www.lcnclosers.com/en/solutions.html",
+      "description": "LCN solutions hub: page title, intro + stacked solution tiles on light grey, related brands on a blue gradient",
+      "blocks": [
+        {
+          "name": "cards-hub-tiles",
+          "instances": [
+            "#resources-container .imageText.hubpage__tiles--view"
+          ]
+        },
+        {
+          "name": "columns-brands",
+          "instances": [
+            "#simple-related-brands .columnselector"
+          ]
+        }
+      ],
+      "urlPattern": "/en/*",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Page Title",
+          "selector": [
+            "#root-main > div.aem-Grid > div.contentcontainer"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#root-main > div.aem-Grid > div.contentcontainer .cmp-title"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Solutions Hub Tiles",
+          "selector": [
+            "#resources-container"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "cards-hub-tiles"
+          ],
+          "defaultContent": [
+            "#resources-container div.col-xs-12 > div > div.allegion-container"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Related Brands",
+          "selector": [
+            "#root-main > div.aem-Grid > div.allegion-xf.experiencefragment"
+          ],
+          "style": "blue-gradient, centered",
+          "blocks": [
+            "columns-brands"
+          ],
+          "defaultContent": [
+            "#simple-related-brands h3"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "variantName": "columns-brands",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Related or partner brands: each column a brand logo linking to the brand site above a short description",
+    "layout": "White box with equal columns separated by a thin vertical rule from 600px; logo and copy centered; columns stack with a horizontal rule on small screens",
+    "sourceSection": "Related Brands (solutions.html), on a navy-to-blue gradient section with a centered heading above"
+  },
+  "contentPattern": {
+    "structure": "one row, one cell per brand: brand logo image (optionally linked to the brand site), description paragraph(s). Empty spacer paragraphs are removed"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-brands"],
+  "usage": "Showcasing sister or partner brands with logo and blurb.",
+  "reuseGuidance": "Use for logo-over-copy columns in a white box. For text beside a video use columns-video; for text beside a stat graphic use columns-stat; for a mixed media tile grid use columns-mosaic."
+}

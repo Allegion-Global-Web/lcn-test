@@ -34,6 +34,8 @@ export default function transform(hookName, element, payload) {
       '#newsletter-modal',
       '#searchModal',
       '.inbenta-search-results',
+      // Breadcrumb trail is site chrome, not authored content.
+      '.cmp-breadcrumb',
     ]);
   }
 

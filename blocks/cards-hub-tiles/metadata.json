@@ -1,0 +1,17 @@
+{
+  "variantName": "cards-hub-tiles",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Hub page entry points: full-width tiles linking to category detail pages (e.g. Solutions by Market / Role / Requirement)",
+    "layout": "One tile per row, stacked with a small gap; from 900px a dark grey text area on the left (~70%) with white heading and description and the photo on the right (~30%); below 900px the photo sits above the text. The whole tile is clickable",
+    "sourceSection": "Solutions Hub Tiles (solutions.html), set on a light-grey section"
+  },
+  "contentPattern": {
+    "structure": "one row per tile: cell 1 tile image; cell 2 heading linked to the detail page, description paragraph. The heading link (or the first link in the tile) becomes the whole-tile link"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-hub-tiles"],
+  "usage": "Hub or landing pages that route visitors to a few category pages with a short description each.",
+  "reuseGuidance": "Use for full-width horizontal link tiles (text beside image). For a 3-up image-top card grid with a 'Go Now' CTA use cards-solutions; for icon + label quick links use cards-icon-links."
+}

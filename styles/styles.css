@@ -322,6 +322,33 @@ main .section.dark-blue a.button.secondary:focus-visible {
   opacity: 1;
 }
 
+/* navy-to-blue diagonal gradient band ("Related Brands"): source uses an image, 30px block inset */
+main .section.blue-gradient {
+  display: flow-root;
+  margin: 0;
+  padding: 30px 0;
+  background-color: var(--dark-color);
+  background-image: url('images/lcn-blue-gradient.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+main .section.blue-gradient h1,
+main .section.blue-gradient h2,
+main .section.blue-gradient h3,
+main .section.blue-gradient h4,
+main .section.blue-gradient h5,
+main .section.blue-gradient h6 {
+  color: #fff;
+}
+
+/* keep the title's 10px bottom margin from collapsing into the block's 30px (source: 40px gap) */
+main .section.blue-gradient > .default-content-wrapper {
+  display: flow-root;
+}
+
 /* section title sits 61px above the cards: the source follows it with an empty h3 (20 + 31 + 10) */
 main .section.dark-blue .default-content-wrapper > h3:last-child {
   margin-bottom: 61px;
@@ -335,16 +362,16 @@ main .section.centered .default-content-wrapper {
  * centered statement band ("PRECISION MATTERS."): 50px top inset, 1140px
  * column, title followed by a 3px light-grey rule and 20px before the stats
  */
-main .section.centered:not(.dark-blue) {
+main .section.centered:not(.dark-blue, .blue-gradient) {
   padding-top: 50px;
 }
 
-main .section.centered:not(.dark-blue) > .default-content-wrapper {
+main .section.centered:not(.dark-blue, .blue-gradient) > .default-content-wrapper {
   max-width: 1140px;
   padding-bottom: 20px;
 }
 
-main .section.centered:not(.dark-blue) > .default-content-wrapper::after {
+main .section.centered:not(.dark-blue, .blue-gradient) > .default-content-wrapper::after {
   content: '';
   display: block;
   height: 3px;
@@ -352,26 +379,62 @@ main .section.centered:not(.dark-blue) > .default-content-wrapper::after {
   background-color: var(--light-color);
 }
 
-main .section.centered:not(.dark-blue) .default-content-wrapper h2 {
+main .section.centered:not(.dark-blue, .blue-gradient) .default-content-wrapper h2 {
   padding: 0 10px;
   color: var(--heading-color);
   font-size: 30px;
   font-weight: 800;
 }
 
+/*
+ * page title band (inner pages, e.g. "Solutions"): a first section holding only a
+ * default-content h1. Source .cmp-title: 30px/600 brand blue, 93px band (15px inset
+ * folded into the margins: 15 + 20 / 10 + 15), 10px side inset (30px from 768px).
+ * The source's 50px "Home / Solutions" breadcrumb above it is not migrated.
+ */
+main > .section:first-child > .default-content-wrapper:only-child > h1:first-child {
+  margin: 35px 10px 25px;
+  color: var(--brand-blue);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/*
+ * hub-tiles band (Solutions): the source wraps it in a bootstrap .container with a
+ * 45px block inset and a 1140px column (the homepage quick-links band uses 30px);
+ * the intro text component adds 15px above the copy (the 15px below it is part of
+ * the cards-hub-tiles top padding)
+ */
+main .section.light-grey.cards-hub-tiles-container {
+  padding: 45px 0;
+}
+
+main .section.light-grey.cards-hub-tiles-container > div {
+  max-width: 1140px;
+}
+
+main .section.light-grey.cards-hub-tiles-container > .default-content-wrapper {
+  padding-top: 15px;
+}
+
 @media (width >= 768px) {
+  main > .section:first-child > .default-content-wrapper:only-child > h1:first-child {
+    margin-inline: 30px;
+  }
+
   main .section.dark-blue {
     padding-top: 100px;
   }
 
-  main .section.centered:not(.dark-blue) .default-content-wrapper h2 {
+  main .section.centered:not(.dark-blue, .blue-gradient) .default-content-wrapper h2 {
     padding: 0 30px;
     font-size: 4.2vw;
   }
 }
 
 @media (width >= 900px) {
-  main .section.centered:not(.dark-blue) > .default-content-wrapper::after {
+  main .section.centered:not(.dark-blue, .blue-gradient) > .default-content-wrapper::after {
     margin-inline: 0;
   }
 }
