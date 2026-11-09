@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.lcnclosers.com/en/solutions.html",
+  "path": "en/solutions",
+  "timestamp": "2026-11-09T08:53:15.100Z",
+  "title": "Commercial Door Control Solutions | LCN Door Closers",
+  "template": "solutions",
+  "blocks": [
+    "cards-hub-tiles",
+    "cards-hub-tiles",
+    "cards-hub-tiles",
+    "columns-brands"
+  ]
+}
