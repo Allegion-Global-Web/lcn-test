@@ -1,0 +1,121 @@
+/*
+ * columns-cta-banner: heading, copy and CTA on a navy-to-blue texture,
+ * beside a dark icon box. Values from lcnclosers.com computed styles.
+ * Mobile: text only (the source hides the icon box below 768px).
+ * From 768px: text 75% / icon 25%, side by side.
+ */
+
+.columns-cta-banner {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 20px;
+}
+
+.columns-cta-banner .columns-cta-banner-row {
+  display: flex;
+  flex-direction: column;
+}
+
+/* text column: background texture (gradient image) dropped by the importer */
+.columns-cta-banner .columns-cta-banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  background-color: var(--dark-color);
+  background-image: url('./columns-cta-banner-bg.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.columns-cta-banner .columns-cta-banner-text :is(h1, h2, h3, h4, h5, h6) {
+  margin: 20px 0 10px;
+  color: var(--accent-color);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+}
+
+.columns-cta-banner .columns-cta-banner-text p {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: var(--body-font-size-m);
+  line-height: 20px;
+}
+
+.columns-cta-banner .columns-cta-banner-text p.columns-cta-banner-cta {
+  margin: 0;
+}
+
+.columns-cta-banner .columns-cta-banner-text > :last-child {
+  margin-bottom: 0;
+}
+
+main .columns-cta-banner .columns-cta-banner-cta a.button:any-link,
+main .columns-cta-banner .columns-cta-banner-cta a:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  margin: 30px 5px 5px;
+  border: 1px solid transparent;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  background-color: var(--brand-blue);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: 1.3333;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--button-transition);
+}
+
+main .columns-cta-banner .columns-cta-banner-cta a.button:hover,
+main .columns-cta-banner .columns-cta-banner-cta a.button:focus-visible,
+main .columns-cta-banner .columns-cta-banner-cta a:hover,
+main .columns-cta-banner .columns-cta-banner-cta a:focus-visible {
+  background-color: #4cbbe9;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* icon box: the icon image carries its own dark background (square, full column width) */
+.columns-cta-banner .columns-cta-banner-icon {
+  display: none;
+}
+
+.columns-cta-banner .columns-cta-banner-icon picture,
+.columns-cta-banner .columns-cta-banner-icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (width >= 768px) {
+  .columns-cta-banner .columns-cta-banner-row {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .columns-cta-banner .columns-cta-banner-text {
+    flex: 0 0 75%;
+    box-sizing: border-box;
+    padding: 43px 30px;
+  }
+
+  .columns-cta-banner .columns-cta-banner-icon {
+    display: block;
+    flex: 0 0 25%;
+  }
+
+  /* a lone column (no icon) spans the full banner */
+  .columns-cta-banner .columns-cta-banner-text:only-child {
+    flex-basis: 100%;
+  }
+}

@@ -7,7 +7,26 @@
  *   2. Card: optional logo picture, heading, paragraphs, CTA link,
  *      optional badge picture (any picture after the heading)
  *   3. Optional: badge image as its own picture-only cell
+ *
+ * In a section with style "boxed" the block gets the class hero-promo-boxed.
  */
+import { readBlockConfig, toClassName } from '../../scripts/aem.js';
+
+/**
+ * true when the enclosing section has the given style. The section-metadata block
+ * applies section classes but loads after this block, so its config is read too.
+ */
+function hasSectionStyle(block, style) {
+  const section = block.closest('.section');
+  if (!section) return false;
+  if (section.classList.contains(style)) return true;
+  const meta = section.querySelector('.section-metadata');
+  if (!meta) return false;
+  const value = readBlockConfig(meta).style || '';
+  return (Array.isArray(value) ? value : String(value).split(','))
+    .some((s) => toClassName(s.trim()) === style);
+}
+
 function hasText(el) {
   return [...el.querySelectorAll('h1, h2, h3, h4, h5, h6, p, ul, ol')]
     .some((node) => node.textContent.trim() !== '');
@@ -34,6 +53,9 @@ function markCta(card) {
 }
 
 export default function decorate(block) {
+  // product pages: section style "boxed" renders the promo as a centred box on a grey band
+  if (hasSectionStyle(block, 'boxed')) block.classList.add('hero-promo-boxed');
+
   const background = document.createElement('div');
   background.className = 'hero-promo-background';
   const card = document.createElement('div');

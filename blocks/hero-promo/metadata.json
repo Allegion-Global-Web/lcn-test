@@ -11,7 +11,17 @@
     "structure": "row 1: background image; row 2: optional logo picture, heading (h2), paragraphs, CTA link, optional badge picture after the heading. The badge may also be a separate picture-only row"
   },
   "options": [],
-  "memberVariantIds": ["hero-promo"],
-  "usage": "Parent-brand or cross-promotion banner near the bottom of a page.",
+  "memberVariantIds": [
+    "hero-promo"
+  ],
+  "usage": {
+    "description": "Parent-brand or cross-promotion banner near the bottom of a page.",
+    "pagesUsing": [
+      "/en/index",
+      "/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-09"
+  },
   "reuseGuidance": "Use when a text panel with logo overlaps a photo and carries a badge. For a top-of-page hero with a product cutout use hero-product."
 }

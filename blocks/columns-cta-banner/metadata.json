@@ -1,0 +1,17 @@
+{
+  "variantName": "columns-cta-banner",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Contained call-to-action banner: heading, short copy and a button beside an icon box",
+    "layout": "Text column (~75%) on a blue gradient beside a dark icon box (~25%) on desktop; stacked on mobile",
+    "sourceSection": "Need Replacement Parts"
+  },
+  "contentPattern": {
+    "structure": "One row, two columns. column 1: heading, paragraph(s), CTA link in its own paragraph; column 2: icon image (picture only). Column order may be swapped; the picture-only column is the icon"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-cta-banner"],
+  "usage": "Inline promo/CTA banner (e.g. replacement parts, contact) within product or content pages.",
+  "reuseGuidance": "Use for a single heading + CTA beside an icon. For a statement beside a stat graphic use columns-stat."
+}

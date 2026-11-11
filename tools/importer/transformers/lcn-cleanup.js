@@ -52,6 +52,11 @@ export default function transform(hookName, element, payload) {
       'form.mktoForm',
       '#onetrust-consent-sdk',
       '.cmp-page__skiptomaincontent',
+      // Product detail chrome: back/share/print row, empty finish picker, empty ratings.
+      // Removed after parsing because the product intro section selector anchors on .upperRow.
+      '.default-product-detail-component .upperRow',
+      '.default-product-detail-component .finisheImgsRow',
+      '.default-product-detail-component .productRatingRow',
       // Decorative line-drawing section backgrounds left over after the hero parsers ran.
       'div.background-image > div[class*="backgroundImage"] > img',
     ]);
@@ -64,6 +69,13 @@ export default function transform(hookName, element, payload) {
     // Empty headings from blank rich-text lines.
     element.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((h) => {
       if (!h.textContent.trim() && !h.querySelector('img, picture')) h.remove();
+    });
+
+    // Same-site links become root-relative so they resolve on the migrated site, not the old one.
+    element.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      const m = href.match(/^https?:\/\/(www\.)?lcnclosers\.com\/+(.*)$/i);
+      if (m) a.setAttribute('href', `/${m[2]}`);
     });
 
     // Strip tracking / framework attributes that are not authorable.

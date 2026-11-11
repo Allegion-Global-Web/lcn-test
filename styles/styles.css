@@ -387,6 +387,292 @@ main .section.centered:not(.dark-blue, .blue-gradient) .default-content-wrapper 
 }
 
 /*
+ * product-page section styles (source: lcnclosers.com 9500-2800 product detail).
+ * --container-width mirrors the source bootstrap column (720 / 940 / 1140 from
+ * 768 / 992 / 1200px); below 768px sections keep the default 15px inset.
+ */
+main {
+  /* gradient bands zoom into the middle of the image like the source's cover over the whole band */
+  --gradient-width: 800%;
+}
+
+@media (width >= 768px) {
+  main {
+    --container-width: 720px;
+    --gradient-width: 300%;
+  }
+}
+
+@media (width >= 992px) {
+  main {
+    --container-width: 940px;
+  }
+}
+
+@media (width >= 1200px) {
+  main {
+    --container-width: 1140px;
+  }
+}
+
+/* contained: content column matches the bootstrap container (accordion, banner, related) */
+main > .section.contained > div {
+  max-width: var(--container-width, var(--content-max-width));
+}
+
+/* inset: 40px extra side inset from 992px (source .container-centered) */
+@media (width >= 992px) {
+  main > .section.inset > div {
+    max-width: calc(var(--container-width, var(--content-max-width)) - 80px);
+    padding-inline: calc(var(--content-padding) + 40px);
+  }
+}
+
+/* padded: 30px block inset; spaced: 15px, 40px from 992px */
+main > .section.padded {
+  padding-block: 30px;
+}
+
+main > .section.spaced {
+  padding-block: 15px;
+}
+
+/* boxed: the boxed promo sits 30px below the previous band on white, flush with the footer */
+main > .section.boxed {
+  padding-top: 30px;
+}
+
+@media (width >= 992px) {
+  main > .section.spaced {
+    padding-block: 40px;
+  }
+}
+
+/* centered-heading: section headings (e.g. "Related Products") centered over the block */
+main > .section.centered-heading > .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+  text-align: center;
+}
+
+/*
+ * gradient: plain navy-to-blue band (source Path 30601.jpg) with white copy and a
+ * green 700 h2 ("Overview"); 73px from the band top to the heading text, 30px
+ * below the copy. Consecutive gradient sections share one continuous band (each
+ * paints half of it); the source covers the whole band with its image, which
+ * shows only the middle of the gradient (hence the zoomed --gradient-width).
+ */
+main > .section.gradient {
+  --gradient-position: 50% 50%;
+  --gradient-size: cover;
+
+  padding-block: 53px 30px;
+  background: var(--dark-color) url('images/lcn-blue-gradient.jpg') var(--gradient-position) / var(--gradient-size) no-repeat;
+}
+
+main > .section.gradient:has(+ .section.gradient) {
+  --gradient-position: 50% 0;
+  --gradient-size: var(--gradient-width) 200%;
+}
+
+main > .section.gradient + .section.gradient {
+  --gradient-position: 50% 100%;
+  --gradient-size: var(--gradient-width) 200%;
+}
+
+/*
+ * gradient-mobile: below 992px the source product banner gradient also runs
+ * behind this section (accordion), 50px past it, with 45px phone side insets
+ */
+@media (width < 992px) {
+  main > .section.gradient-mobile {
+    padding-bottom: 50px;
+    background: var(--dark-color) url('images/lcn-blue-gradient.jpg') 50% 100% / var(--gradient-width) 200% no-repeat;
+  }
+}
+
+@media (width < 768px) {
+  main > .section.gradient-mobile > div {
+    padding-inline: 45px;
+  }
+}
+
+main > .section.gradient:not(.card) > .default-content-wrapper {
+  color: #fff;
+}
+
+main > .section.gradient:not(.card) > .default-content-wrapper :is(h1, h3, h4, h5, h6),
+main > .section.gradient:not(.card) > .default-content-wrapper a:any-link {
+  color: #fff;
+}
+
+main > .section.gradient:not(.card) > .default-content-wrapper h2 {
+  color: var(--accent-color);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+main > .section.gradient > .default-content-wrapper p,
+main > .section.card > .default-content-wrapper p {
+  font-size: var(--body-font-size-l);
+  line-height: calc(20 / 14);
+}
+
+/* superscripts (TM) must not grow the line box (source bootstrap sup: 75%, raised 0.5em) */
+main > .section.gradient > .default-content-wrapper sup,
+main > .section.card > .default-content-wrapper sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+/*
+ * card: content in a centered light-grey card (1170px from 1200px; 15px from the
+ * screen edges on phones) with a 50px top / 20px bottom inset (the source keeps a
+ * hidden 50px Back / Share / Print row above the gallery). On a gradient section
+ * the band starts 85px below the card top, so white shows above it.
+ */
+main > .section.card {
+  --card-width: calc(100% - 30px);
+
+  padding: 50px 30px 20px;
+  background: linear-gradient(var(--light-color) 0 0) 50% 0 / var(--card-width) 100% no-repeat;
+}
+
+main > .section.card.gradient {
+  background:
+    linear-gradient(var(--light-color) 0 0) 50% 0 / var(--card-width) 100% no-repeat,
+    linear-gradient(var(--background-color) 0 0) 0 0 / 100% 85px no-repeat,
+    var(--dark-color) url('images/lcn-blue-gradient.jpg') var(--gradient-position) / var(--gradient-size) no-repeat;
+}
+
+main > .section.card > div {
+  max-width: none;
+  margin: 0;
+}
+
+/* 25px below the title: source h1 margin 10 + empty SKU row 10 + 5px row inset */
+main > .section.card h1 {
+  margin: 20px 0 25px;
+  color: var(--text-color);
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* closing CTA (a paragraph holding only a link): brand-blue filled button */
+main > .section.card > .default-content-wrapper > p:last-child:has(> a:only-child) {
+  margin: 0;
+}
+
+/* lead-in line above the closing CTA: the source keeps an empty spacer paragraph (10 + 23 + 10px) */
+main > .section.card > .default-content-wrapper > p + p:has(+ p:last-child > a:only-child) {
+  margin-top: 43px;
+}
+
+main > .section.card > .default-content-wrapper > p:last-child > a:only-child:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: calc(100% - 10px);
+  margin: 30px 5px 5px;
+  border: 1px solid transparent;
+  border-radius: var(--button-border-radius);
+  padding: 15px 30px;
+  background-color: var(--brand-blue);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  line-height: calc(4 / 3);
+  text-align: center;
+  text-decoration: none;
+  transition: var(--button-transition);
+}
+
+main > .section.card > .default-content-wrapper > p:last-child > a:only-child:hover,
+main > .section.card > .default-content-wrapper > p:last-child > a:only-child:focus-visible {
+  background-color: #4cbbe9;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * split: two equal, top-aligned columns from 768px (stacked in source order
+ * below). Plain sections: 30px gutter over the container width + 28px (source
+ * row offsets); 45px side insets on phones.
+ */
+main > .section.split:not(.card) > div {
+  padding-inline: 45px;
+}
+
+@media (width >= 768px) {
+  main > .section.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    column-gap: 30px;
+    padding-inline: calc((100% - var(--container-width) - 28px) / 2);
+  }
+
+  main > .section.split > div,
+  main > .section.split:not(.card) > div {
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  main > .section.gradient:not(.card) > .default-content-wrapper h2 {
+    font-size: 40px;
+  }
+
+  /*
+   * card: each column is half the card with a 15px gutter inside; the second
+   * column runs to the card edge (source bootstrap row overflow)
+   */
+  main > .section.card {
+    --card-width: calc(var(--container-width) + 30px);
+
+    padding-inline: calc((100% - var(--card-width)) / 2 + 15px) calc((100% - var(--card-width)) / 2);
+  }
+
+  main > .section.card.split {
+    grid-template-columns: calc(50% + 7.5px) calc(50% - 7.5px);
+    column-gap: 0;
+  }
+
+  main > .section.card.split > div {
+    padding: 0 15px;
+  }
+
+  main > .section.card.split > div:last-child {
+    padding-right: 0;
+  }
+
+  /* copy and CTA keep a right inset beside the gallery (title runs full width) */
+  main > .section.card > .default-content-wrapper > p {
+    padding-right: 51px;
+  }
+}
+
+@media (width >= 992px) {
+  main > .section.card h1 {
+    font-size: 65px;
+  }
+}
+
+@media (width >= 1024px) {
+  main > .section.card > .default-content-wrapper > p {
+    padding-right: 60px;
+  }
+
+  main > .section.card > div.default-content-wrapper {
+    padding-bottom: 30px;
+  }
+}
+
+/*
  * page title band (inner pages, e.g. "Solutions"): a first section holding only a
  * default-content h1. Source .cmp-title: 30px/600 brand blue, 93px band (15px inset
  * folded into the margins: 15 + 20 / 10 + 15), 10px side inset (30px from 768px).

@@ -129,3 +129,195 @@ main .cards-solutions .cards-solutions-card-cta a:focus-visible {
     padding: 0;
   }
 }
+
+/*
+ * "Related Products" look: cards without a CTA paragraph (block JS adds
+ * .cards-solutions-related). Source .related-products: 1140px grey (#f2f2f3) box,
+ * 5px top inset, 1em (mobile) / 100px side inset with a 1% right margin, cards
+ * 80% (mobile) / 85% of their column, image at 70% opacity with a 25px inset,
+ * dark title that turns brand blue on hover.
+ */
+.cards-solutions.cards-solutions-related {
+  box-sizing: border-box;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 5px calc(14px + 1%) 0 14px;
+  background-color: var(--light-color);
+}
+
+.cards-solutions.cards-solutions-related > ul > li {
+  width: 80%;
+  margin: 0 auto 56px;
+  border: 0;
+  padding: 0;
+  transition: 0.4s;
+}
+
+.cards-solutions.cards-solutions-related .cards-solutions-card-image {
+  margin: 25px 0;
+}
+
+.cards-solutions.cards-solutions-related .cards-solutions-card-image img {
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.cards-solutions.cards-solutions-related > ul > li:hover .cards-solutions-card-image img {
+  opacity: 1;
+}
+
+.cards-solutions.cards-solutions-related .cards-solutions-card-body {
+  padding: 0;
+  text-align: left;
+  hyphens: manual;
+}
+
+.cards-solutions.cards-solutions-related .cards-solutions-card-body :is(h2, h3, h4, h5, h6) {
+  margin: 0;
+  padding: 0;
+  color: #282823;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.8571px;
+  transition: 0.4s;
+}
+
+.cards-solutions.cards-solutions-related .cards-solutions-card-body :is(h2, h3, h4, h5, h6) a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cards-solutions.cards-solutions-related > ul > li:hover .cards-solutions-card-body :is(h2, h3, h4, h5, h6),
+.cards-solutions.cards-solutions-related > ul > li:focus-within .cards-solutions-card-body :is(h2, h3, h4, h5, h6) {
+  color: var(--brand-blue);
+}
+
+.cards-solutions.cards-solutions-related .cards-solutions-card-body p {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: var(--body-font-size-m);
+  line-height: 20px;
+}
+
+@media (width > 768px) {
+  .cards-solutions.cards-solutions-related {
+    padding-inline: 100px calc(100px + 1%);
+  }
+
+  .cards-solutions.cards-solutions-related > ul > li {
+    width: 85%;
+  }
+}
+
+/*
+ * Related Products carousel (source: slick, < 768px). Track is a scroll-snap row of
+ * 1 (<= 480px), 2 (<= 600px) or 3 cards per view; each card keeps 80% of its slide.
+ * Arrows (FontAwesome angle glyphs, 70px, #282823 at 75%) only show when the track scrolls;
+ * slick puts them at 28% of the list height; the glyph is centred in a 45px pseudo box, so it
+ * lands 5px inside the list's left edge and 0.44px inside its right edge.
+ */
+.cards-solutions .cards-solutions-arrow {
+  display: none;
+}
+
+.cards-solutions .cards-solutions-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (width < 768px) {
+  .cards-solutions.cards-solutions-related {
+    position: relative;
+  }
+
+  .cards-solutions.cards-solutions-related > ul {
+    --cards-solutions-per-view: 1;
+
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .cards-solutions.cards-solutions-related > ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cards-solutions.cards-solutions-related > ul > li {
+    box-sizing: border-box;
+    flex: 0 0 calc(100% / var(--cards-solutions-per-view));
+    width: auto;
+    margin: 0 0 56px;
+    padding: 0 calc(10% / var(--cards-solutions-per-view));
+    scroll-snap-align: start;
+  }
+
+  .cards-solutions.cards-solutions-related.cards-solutions-scrollable .cards-solutions-arrow {
+    position: absolute;
+    top: calc((100% - 5px) * 0.28 - 1px);
+    z-index: 5;
+    display: block;
+    width: 25px;
+    height: 70px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: #282823;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.3s;
+  }
+
+  .cards-solutions.cards-solutions-related .cards-solutions-prev {
+    left: 4px;
+  }
+
+  .cards-solutions.cards-solutions-related .cards-solutions-next {
+    right: calc(1% - 0.56px);
+  }
+
+  .cards-solutions.cards-solutions-related .cards-solutions-arrow:hover,
+  .cards-solutions.cards-solutions-related .cards-solutions-arrow:focus-visible {
+    opacity: 1;
+  }
+
+  .cards-solutions.cards-solutions-related .cards-solutions-arrow:focus-visible {
+    outline: 2px solid var(--brand-blue);
+    outline-offset: 2px;
+  }
+
+  .cards-solutions.cards-solutions-related .cards-solutions-arrow svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: currentcolor;
+  }
+}
+
+@media (480px < width < 768px) {
+  .cards-solutions.cards-solutions-related > ul {
+    --cards-solutions-per-view: 2;
+  }
+}
+
+@media (600px < width < 768px) {
+  .cards-solutions.cards-solutions-related > ul {
+    --cards-solutions-per-view: 3;
+  }
+}
+
+@media (width < 768px) and (prefers-reduced-motion: no-preference) {
+  .cards-solutions.cards-solutions-related > ul {
+    scroll-behavior: smooth;
+  }
+}

@@ -11,7 +11,17 @@
     "structure": "one row, two cells: cell 1 statement paragraph; cell 2 stat image, optionally wrapped in a link (e.g. to a PDF article)"
   },
   "options": [],
-  "memberVariantIds": ["columns-stat"],
-  "usage": "Single highlighted statistic with supporting text.",
+  "memberVariantIds": [
+    "columns-stat"
+  ],
+  "usage": {
+    "description": "Single highlighted statistic with supporting text.",
+    "pagesUsing": [
+      "/en/index",
+      "/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-09"
+  },
   "reuseGuidance": "Use for text plus a stat graphic. Keep the stat value in the image alt text, not in a heading."
 }

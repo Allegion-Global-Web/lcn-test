@@ -1,0 +1,157 @@
+/*
+ * accordion-product: product details accordion.
+ * Values measured from the source (lcnclosers.com .accordian-tab, Bootstrap
+ * panel-group): white items 5px apart with a light bottom rule, 16px/600
+ * titles with a blue +/- toggle, grey #f2f2f2 bodies with 30px padding.
+ */
+
+.accordion-product {
+  padding: 10px 0 20px;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: var(--body-line-height);
+}
+
+.accordion-product .accordion-product-item {
+  border-bottom: 1px solid #dcdcdc;
+  border-radius: 4px;
+  background-color: var(--background-color);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.accordion-product .accordion-product-item + .accordion-product-item {
+  margin-top: 5px;
+}
+
+/* title bar */
+.accordion-product .accordion-product-item-label {
+  position: relative;
+  display: block;
+  padding: 15px 41px 15px 15px;
+  color: #555;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-product .accordion-product-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-product .accordion-product-item-label:hover {
+  color: var(--brand-blue);
+}
+
+.accordion-product .accordion-product-item-label:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: -2px;
+}
+
+/* plus / minus toggle: two 2px bars, the vertical one drops out when open */
+.accordion-product .accordion-product-item-label::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 11px;
+  height: 11px;
+  background-image:
+    linear-gradient(var(--brand-blue), var(--brand-blue)),
+    linear-gradient(var(--brand-blue), var(--brand-blue));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 2px, 2px 100%;
+  transition: transform 0.5s, background-size 0.5s;
+}
+
+.accordion-product .accordion-product-item[open]:not(.is-closing) > .accordion-product-item-label::after {
+  background-size: 100% 2px, 2px 0;
+  transform: rotate(180deg);
+}
+
+/* height animation wrapper (JS animates height 0.35s ease, like the source) */
+.accordion-product .accordion-product-item.is-animating > .accordion-product-item-content {
+  overflow: hidden;
+}
+
+/* open body */
+.accordion-product .accordion-product-item-body {
+  padding: 30px;
+  border-top: 1px solid #ddd;
+  background-color: #f2f2f2;
+  overflow-wrap: break-word;
+}
+
+.accordion-product .accordion-product-item-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion-product .accordion-product-item-body p {
+  margin: 0 0 10px;
+  font-size: var(--body-font-size-l);
+  line-height: var(--body-line-height);
+}
+
+.accordion-product .accordion-product-item-body strong,
+.accordion-product .accordion-product-item-body b {
+  font-weight: 700;
+}
+
+.accordion-product .accordion-product-item-body sup {
+  font-size: 75%;
+  line-height: 0;
+}
+
+.accordion-product .accordion-product-item-body h2,
+.accordion-product .accordion-product-item-body h3,
+.accordion-product .accordion-product-item-body h4,
+.accordion-product .accordion-product-item-body h5,
+.accordion-product .accordion-product-item-body h6 {
+  margin: 0 0 10px;
+  color: var(--text-color);
+  font-size: var(--body-font-size-l);
+  font-weight: 700;
+  line-height: var(--body-line-height);
+}
+
+.accordion-product .accordion-product-item-body ul,
+.accordion-product .accordion-product-item-body ol {
+  margin: 0 0 10px;
+  padding-left: 40px;
+}
+
+.accordion-product .accordion-product-item-body li {
+  margin: 0;
+}
+
+.accordion-product .accordion-product-item-body li ul,
+.accordion-product .accordion-product-item-body li ol {
+  margin-bottom: 0;
+}
+
+.accordion-product .accordion-product-item-body a:any-link,
+.accordion-product .accordion-product-item-body a:hover,
+.accordion-product .accordion-product-item-body a:focus-visible {
+  color: var(--brand-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .accordion-product {
+    margin-right: 25px;
+    padding: 55px 15px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-product .accordion-product-item-label::after {
+    transition: none;
+  }
+}

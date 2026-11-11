@@ -1,0 +1,17 @@
+{
+  "variantName": "accordion-product",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Product details accordion (features, specifications, finishes, mounting options, downloads), all items collapsed on load",
+    "layout": "Full-width rows separated by thin grey rules; small bold letter-spaced titles with a blue + toggle at the right; open item body on light grey",
+    "sourceSection": "Product Details Accordion"
+  },
+  "contentPattern": {
+    "structure": "One row per item. cell 1: title (plain text); cell 2: content (paragraphs, bold sub-heads or headings, bulleted lists, PDF/video links). Any number of rows; a single-cell row continues the previous item's content"
+  },
+  "options": [],
+  "memberVariantIds": ["accordion-product"],
+  "usage": "Long product reference content (features, specs, finishes, mounting/arm options, downloads) on product detail pages.",
+  "reuseGuidance": "Use for collapsible product reference sections. Keep each item's content in one cell; use headings or bold paragraphs for sub-groups."
+}

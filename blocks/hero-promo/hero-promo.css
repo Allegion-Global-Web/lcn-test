@@ -212,3 +212,149 @@ main .hero-promo .hero-promo-card a.button:focus-visible {
     font-size: 56px;
   }
 }
+
+/*
+ * boxed (product pages, section style "boxed"): source .background-image.all-in-one
+ * (computed styles: migration-work/source-hero-promo-boxed-*.png).
+ * Orange background image boxed at max 1084px inside a bootstrap container on a
+ * #f2f2f3 band (45px above the box, none below); full-bleed below 768px.
+ * Logo above two columns (75% text / 25% badge); logo and badge hidden below 768px.
+ */
+.hero-promo.hero-promo-boxed {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-content: center;
+  background-color: var(--light-color);
+}
+
+/*
+ * source paints the photo as a cover background, so the box is as tall as its text;
+ * size containment stops the 1084x478 img from setting the row height
+ */
+.hero-promo.hero-promo-boxed .hero-promo-background {
+  display: block;
+  grid-area: 1 / 1;
+  min-width: 0;
+  contain: size;
+}
+
+.hero-promo.hero-promo-boxed .hero-promo-inner {
+  grid-area: 1 / 1;
+
+  /*
+   * 30px container padding + 31px logo spacer (logo is hidden on mobile);
+   * bottom: 30px + the source's 1px empty badge column
+   */
+  padding: 61px 30px 31px;
+}
+
+.hero-promo.hero-promo-boxed:not(.no-image) .hero-promo-inner {
+  background: none;
+}
+
+.hero-promo.hero-promo-boxed .hero-promo-logo,
+.hero-promo.hero-promo-boxed .hero-promo-badge {
+  display: none;
+}
+
+.hero-promo.hero-promo-boxed h1,
+.hero-promo.hero-promo-boxed h2,
+.hero-promo.hero-promo-boxed h3 {
+  margin: 0 0 10px;
+  font-size: 56px;
+}
+
+main .hero-promo.hero-promo-boxed .hero-promo-cta a:any-link,
+main .hero-promo.hero-promo-boxed .hero-promo-card a.button:any-link {
+  margin: 30px 5px 5px;
+  font-family: var(--heading-font-family);
+}
+
+@media (width >= 768px) {
+  .hero-promo.hero-promo-boxed {
+    grid-template-columns: 720px;
+    padding-top: 45px;
+  }
+
+  /* logo spans both columns; text in the 75% column, badge in the 25% column */
+  .hero-promo.hero-promo-boxed .hero-promo-inner {
+    display: grid;
+    grid-template-columns: calc((100% + 30px) * 0.75 - 30px) minmax(0, 1fr);
+    align-items: start;
+    gap: 0 30px;
+    padding: 30px;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-card {
+    display: contents;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-card > * {
+    grid-column: 1;
+    min-width: 0;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-card > .hero-promo-logo {
+    display: block;
+    grid-column: 1 / -1;
+    margin: 0 0 30px;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-badge {
+    display: block;
+    grid-column: 2;
+    grid-row: 2 / span 4;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-badge picture {
+    display: block;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-badge img {
+    max-width: 100%;
+  }
+}
+
+@media (width >= 992px) {
+  .hero-promo.hero-promo-boxed {
+    grid-template-columns: 940px;
+  }
+}
+
+/* undo the homepage photo-overlap layout */
+@media (width >= 1010px) {
+  .hero-promo.hero-promo-boxed {
+    max-width: none;
+    margin: 0;
+    overflow-x: visible;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-background {
+    position: static;
+    width: auto;
+    max-width: none;
+    height: auto;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-inner {
+    left: auto;
+    width: auto;
+  }
+
+  .hero-promo.hero-promo-boxed .hero-promo-badge {
+    top: auto;
+    margin-left: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .hero-promo.hero-promo-boxed .hero-promo-inner {
+    padding: 50px;
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-promo.hero-promo-boxed {
+    grid-template-columns: 1084px;
+  }
+}

@@ -1,0 +1,76 @@
+/*
+ * cards-attributes: icon + label attribute list on a light-grey box.
+ * Source (.fullWidthColumnSelector in .container-custom): #f2f2f3 box, 15px inset
+ * (30px 20px from 1200px), always two bootstrap col-xs-6 columns with a 30px gutter,
+ * filled top-to-bottom (first half left, rest right). Each item is an inline 30px icon
+ * (natural aspect, middle-aligned) followed by a 16px Poppins label that wraps under
+ * the icon, 10px below each item. Linked labels: brand blue, bold, no hover change.
+ */
+
+.cards-attributes {
+  padding: 15px;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-l);
+  line-height: var(--body-line-height);
+  text-align: start;
+}
+
+.cards-attributes > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  column-count: 2;
+  column-gap: 30px;
+}
+
+.cards-attributes .cards-attributes-item {
+  display: block;
+  margin: 0;
+  padding: 0 0 10px;
+  break-inside: avoid;
+}
+
+.cards-attributes .cards-attributes-icon,
+.cards-attributes .cards-attributes-icon picture,
+.cards-attributes .cards-attributes-label,
+.cards-attributes .cards-attributes-label > p {
+  display: inline;
+  margin: 0;
+}
+
+/* the source separates icon and label with a text space: it hangs when the label wraps below */
+.cards-attributes .cards-attributes-icon::after {
+  content: ' ';
+}
+
+.cards-attributes .cards-attributes-icon img {
+  display: inline;
+  width: 30px;
+  max-width: none;
+  height: auto;
+  vertical-align: middle;
+}
+
+.cards-attributes .cards-attributes-label sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+main .cards-attributes.block .cards-attributes-label a:any-link,
+main .cards-attributes.block .cards-attributes-label a:hover,
+main .cards-attributes.block .cards-attributes-label a:focus-visible {
+  color: var(--brand-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (width >= 1200px) {
+  .cards-attributes {
+    padding: 30px 20px;
+  }
+}

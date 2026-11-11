@@ -32,7 +32,13 @@ export default function parse(element, { document }) {
   if (bgImg) cells.push([bgImg]);
 
   const content = [];
-  const logo = element.querySelector('.columnselector .cmp.cmp-image img');
+  // Homepage XF: logo sits inside the .columnselector. Product-page XF: logo is a
+  // standalone .cmp-image above the .columnselector (same fragment, other layout).
+  let logo = element.querySelector('.columnselector .cmp.cmp-image img');
+  if (!logo) {
+    logo = [...element.querySelectorAll('.cmp.cmp-image img')]
+      .find((img) => !img.closest('.columnselector') && img !== bgImg) || null;
+  }
   if (logo) content.push(logo);
 
   const rte = element.querySelector('.columnselector .customrte');

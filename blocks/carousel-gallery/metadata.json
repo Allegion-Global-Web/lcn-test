@@ -1,0 +1,17 @@
+{
+  "variantName": "carousel-gallery",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Product image gallery: one large product image at a time with round thumbnail navigation, auto-rotating",
+    "layout": "Large active image (slides horizontally); a centered row of round thumbnails below (wraps when there are many); no visible prev/next arrows (arrow keys work)",
+    "sourceSection": "Product Intro"
+  },
+  "contentPattern": {
+    "structure": "One row per gallery image. cell 1: image (alt text kept); cell 2: optional caption text (usually empty). Any number of rows; rows without an image are ignored; a single image renders without controls"
+  },
+  "options": [],
+  "memberVariantIds": ["carousel-gallery"],
+  "usage": "Product photo gallery beside the product title and description on product detail pages.",
+  "reuseGuidance": "Use for image-only galleries with thumbnails. For side-by-side text and image slides use carousel-featured."
+}

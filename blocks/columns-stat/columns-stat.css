@@ -76,3 +76,71 @@
     order: 0;
   }
 }
+
+/*
+ * Heading variant (text cell has its own heading, set by block JS):
+ * product-page "Did You Know?" band. Values from source computed styles
+ * (lcnclosers.com 9500-2800 product page columnselector): text left, graphic
+ * right; stacked text-then-graphic on mobile.
+ */
+.columns-stat.columns-stat-has-heading {
+  padding: 0;
+}
+
+.columns-stat.columns-stat-has-heading > div {
+  border: 0;
+}
+
+.columns-stat.columns-stat-has-heading > div > div {
+  padding: 0 15px;
+}
+
+.columns-stat.columns-stat-has-heading .columns-stat-text {
+  color: var(--text-color);
+  hyphens: manual;
+}
+
+.columns-stat.columns-stat-has-heading .columns-stat-text h2 {
+  margin: 20px 0 10px;
+  color: var(--brand-blue);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 28.6px;
+}
+
+.columns-stat.columns-stat-has-heading .columns-stat-text p {
+  margin: 0 0 10px;
+  font-size: var(--body-font-size-m);
+  line-height: 20px;
+}
+
+.columns-stat.columns-stat-has-heading .columns-stat-graphic {
+  order: 0;
+  padding-top: 30px;
+}
+
+.columns-stat.columns-stat-has-heading .columns-stat-graphic img {
+  width: 100%;
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .columns-stat.columns-stat-has-heading {
+    padding-inline: 0;
+  }
+
+  .columns-stat.columns-stat-has-heading .columns-stat-text h2 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+@media (width >= 1200px) {
+  .columns-stat.columns-stat-has-heading {
+    padding-inline: 60px;
+  }
+
+  .columns-stat.columns-stat-has-heading .columns-stat-graphic {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "variantName": "cards-attributes",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Product attribute list: small line icons, each beside a short label; some labels link to a related page",
+    "layout": "Light grey box with items in two top-to-bottom columns at every width; 30px inline icon before its label",
+    "sourceSection": "Overview"
+  },
+  "contentPattern": {
+    "structure": "One row per attribute. cell 1: icon image; cell 2: label text, or a link whose text is the label. Any number of rows; empty cells are dropped"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-attributes"],
+  "usage": "Feature/attribute summary (mounting, certifications, capacity) beside the product overview on product detail pages.",
+  "reuseGuidance": "Use for short icon + label facts. For icon quick-links in a row use cards-icon-links; for image cards with descriptions use cards-solutions."
+}

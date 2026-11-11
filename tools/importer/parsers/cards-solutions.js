@@ -3,10 +3,77 @@
 
 /**
  * Parser for cards-solutions.
- * Source: .columnselector inside the solutions background-image band; three .imageText cards.
- * One row per card: [ card image | two-line heading, description, CTA link ].
+ * Two source structures (detected by markup):
+ *  A) Homepage: .columnselector inside the solutions background-image band; .imageText cards.
+ *     One row per card: [ card image | two-line heading, description, CTA link ].
+ *  B) Product detail: .related-products component; .related__product--card items
+ *     (slick carousel). The component's own "Related Products" title is not
+ *     copied (the section carries it as default content).
+ *     One row per product: [ product image | linked title heading, description ].
  */
+function cleanText(el) {
+  return el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
+}
+
+function parseRelatedProducts(element, document) {
+  const cells = [];
+  // stable inner wrapper of each card; slick clones (if any) are skipped
+  const cards = [...element.querySelectorAll('.related__product--details')]
+    .filter((card) => !card.closest('.slick-cloned'));
+
+  cards.forEach((card) => {
+    const titleEl = card.querySelector('.related__product--title');
+    const descEl = card.querySelector('.related__product--desc');
+    const srcImg = card.querySelector('img');
+    const link = (titleEl && titleEl.closest('a[href]'))
+      || card.querySelector('a.related__product--button[href]')
+      || card.querySelector('a[href]');
+    // source hrefs carry a doubled slash after the host (".com//en/...")
+    const href = link ? link.getAttribute('href').trim().replace(/^(https?:\/\/[^/]+)\/{2,}/, '$1/') : '';
+
+    let imageCell = '';
+    if (srcImg && srcImg.getAttribute('src')) {
+      const img = document.createElement('img');
+      img.src = srcImg.getAttribute('src');
+      img.alt = (srcImg.getAttribute('alt') || '').trim();
+      imageCell = img;
+    }
+
+    const content = [];
+    const title = cleanText(titleEl);
+    if (title) {
+      const heading = document.createElement('h4');
+      if (href) {
+        const a = document.createElement('a');
+        a.href = href;
+        a.textContent = title;
+        heading.append(a);
+      } else {
+        heading.textContent = title;
+      }
+      content.push(heading);
+    }
+    const desc = cleanText(descEl);
+    if (desc) {
+      const p = document.createElement('p');
+      p.textContent = desc;
+      content.push(p);
+    }
+
+    if (!imageCell && !content.length) return;
+    cells.push([imageCell, content.length ? content : '']);
+  });
+  return cells;
+}
+
 export default function parse(element, { document }) {
+  if (element.matches('.related-products') || element.querySelector('.related__product--card, .related__product--details')) {
+    const relatedCells = parseRelatedProducts(element, document);
+    const relatedBlock = WebImporter.Blocks.createBlock(document, { name: 'cards-solutions', cells: relatedCells });
+    element.replaceWith(relatedBlock);
+    return;
+  }
+
   const cells = [];
   const cards = element.querySelectorAll('.imageText');
 

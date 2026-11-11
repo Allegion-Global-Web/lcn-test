@@ -11,7 +11,17 @@
     "structure": "cell 1: card image; cell 2: heading (two lines, e.g. 'Solutions by' / 'Market'), description paragraph, CTA link ('Go Now')"
   },
   "options": [],
-  "memberVariantIds": ["cards-solutions"],
-  "usage": "Navigational cards splitting solutions by market, role or requirement.",
+  "memberVariantIds": [
+    "cards-solutions"
+  ],
+  "usage": {
+    "description": "Navigational cards splitting solutions by market, role or requirement.",
+    "pagesUsing": [
+      "/en/index",
+      "/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-09"
+  },
   "reuseGuidance": "Use for image-top cards linking to category pages. For icon + label quick links use cards-icon-links."
 }
