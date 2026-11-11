@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.lcnclosers.com/en/products/automatic-door-operators/8310-series-actuators-sensors-accessories.html",
+  "path": "en/products/automatic-door-operators/8310-series-actuators-sensors-accessories",
+  "timestamp": "2026-11-11T13:14:07.075Z",
+  "title": "LCN 8310 Series | Touchless Actuators, Openers, & Sensors",
+  "template": "product-detail",
+  "blocks": [
+    "carousel-gallery",
+    "cards-attributes",
+    "accordion-product",
+    "columns-cta-banner",
+    "cards-solutions",
+    "columns-stat",
+    "hero-promo"
+  ],
+  "importScript": "083b17ab860d"
+}

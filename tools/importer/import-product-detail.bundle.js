@@ -296,7 +296,12 @@ var CustomImportScript = (() => {
       const content = [];
       const h = card.querySelector("h1, h2, h3, h4");
       if (h) {
-        const lines = [...h.querySelectorAll("span")].map((s) => s.textContent.replace(/\s+/g, " ").trim()).filter(Boolean);
+        let lines = [...h.querySelectorAll("span")].map((s) => s.textContent.replace(/\s+/g, " ").trim()).filter(Boolean);
+        if (lines.length < 2 && h.querySelector("br")) {
+          const clone = h.cloneNode(true);
+          clone.querySelectorAll("br").forEach((br) => br.replaceWith("\0"));
+          lines = clone.textContent.split("\0").map((s) => s.replace(/\s+/g, " ").trim()).filter(Boolean);
+        }
         const heading = document.createElement(h.tagName.toLowerCase());
         if (lines.length > 1) {
           lines.forEach((line, i) => {
@@ -592,7 +597,8 @@ var CustomImportScript = (() => {
   var PAGE_TEMPLATE = {
     "name": "product-detail",
     "urls": [
-      "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html"
+      "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html",
+      "https://www.lcnclosers.com/en/products/automatic-door-operators/8310-series-actuators-sensors-accessories.html"
     ],
     "representativeUrl": "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html",
     "description": "LCN product detail page: product image gallery beside title/description/CTA (light grey), Overview text beside attribute list (dark blue), product details accordion, replacement parts CTA banner, related products cards (light grey), Did You Know stat columns, Allegion promo fragment",

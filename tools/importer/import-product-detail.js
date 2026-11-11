@@ -14,7 +14,8 @@ import lcnSectionsTransformer from './transformers/lcn-sections.js';
 const PAGE_TEMPLATE = {
   "name": "product-detail",
   "urls": [
-    "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html"
+    "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html",
+    "https://www.lcnclosers.com/en/products/automatic-door-operators/8310-series-actuators-sensors-accessories.html"
   ],
   "representativeUrl": "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html",
   "description": "LCN product detail page: product image gallery beside title/description/CTA (light grey), Overview text beside attribute list (dark blue), product details accordion, replacement parts CTA banner, related products cards (light grey), Did You Know stat columns, Allegion promo fragment",
