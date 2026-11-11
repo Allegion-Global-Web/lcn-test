@@ -85,9 +85,18 @@ export default function parse(element, { document }) {
     const h = card.querySelector('h1, h2, h3, h4');
     if (h) {
       // Rebuild the two-line heading ("Solutions by" <br> "Market") from its spans
-      const lines = [...h.querySelectorAll('span')]
+      let lines = [...h.querySelectorAll('span')]
         .map((s) => s.textContent.replace(/\s+/g, ' ').trim())
         .filter(Boolean);
+      // First line as a bare text node outside the spans ("Solutions by<span><br></span><span>Role</span>"):
+      // split the heading at its <br>s instead.
+      if (lines.length < 2 && h.querySelector('br')) {
+        const clone = h.cloneNode(true);
+        clone.querySelectorAll('br').forEach((br) => br.replaceWith('\u0000'));
+        lines = clone.textContent.split('\u0000')
+          .map((s) => s.replace(/\s+/g, ' ').trim())
+          .filter(Boolean);
+      }
       const heading = document.createElement(h.tagName.toLowerCase());
       if (lines.length > 1) {
         lines.forEach((line, i) => {

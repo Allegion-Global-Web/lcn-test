@@ -53,6 +53,11 @@ export default function decorate(block) {
     ul.append(li);
   });
   optimizeImages(ul);
-  ul.querySelectorAll(':scope > li').forEach(flagLabelledImage);
+  const cards = [...ul.querySelectorAll(':scope > li')];
+  cards.forEach(flagLabelledImage);
+  // informational cards (icon + heading + description, no link): pillars look
+  if (cards.length && cards.every((li) => li.querySelector('h1, h2, h3, h4, h5, h6') && !li.querySelector('a'))) {
+    block.classList.add(`${BLOCK}-pillars`);
+  }
   block.replaceChildren(ul);
 }

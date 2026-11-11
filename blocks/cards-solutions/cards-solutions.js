@@ -119,6 +119,29 @@ function decorateCarousel(block, ul) {
   block.append(status);
 }
 
+/* section styles that paint a navy band behind the block (white card copy) */
+const DARK_SECTION_STYLES = ['dark-blue', 'blue-gradient', 'gradient'];
+
+/*
+ * true when the block sits on a light band (e.g. a plain white "centered-heading" section):
+ * no dark section style, no background image and no dark background colour
+ */
+function isOnLight(section) {
+  if (!section) return true;
+  // section styles may still sit in a not-yet-decorated section-metadata table
+  const pending = [...section.querySelectorAll('.section-metadata > div')]
+    .filter((row) => row.children[0]?.textContent.trim().toLowerCase() === 'style')
+    .flatMap((row) => (row.children[1]?.textContent || '').split(','))
+    .map((style) => style.trim().toLowerCase().replace(/\s+/g, '-'));
+  const styles = [...section.classList, ...pending];
+  if (DARK_SECTION_STYLES.some((style) => styles.includes(style))) return false;
+  const { backgroundColor, backgroundImage } = getComputedStyle(section);
+  if (backgroundImage && backgroundImage !== 'none') return false;
+  const [r = 255, g = 255, b = 255, a = 1] = (backgroundColor.match(/[\d.]+/g) || []).map(Number);
+  if (a === 0) return true;
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 >= 0.5;
+}
+
 export default function decorate(block) {
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
@@ -174,6 +197,12 @@ export default function decorate(block) {
     const columns = Math.min(ul.children.length, 4);
     block.classList.add(`${BLOCK}-cols-${columns}`);
     block.style.setProperty(`--${BLOCK}-columns`, columns);
+    // same CTA cards on a white band (source why-lcn "Solutions Made Easy."): black copy
+    const section = block.closest('.section');
+    const update = () => block.classList.toggle(`${BLOCK}-on-light`, isOnLight(section));
+    update();
+    // section styles can land after this block decorates (section-metadata block)
+    if (section) new MutationObserver(update).observe(section, { attributes: true, attributeFilter: ['class', 'style'] });
   }
 
   // whole card is clickable on source; keep real links/text selection working

@@ -11,7 +11,16 @@
     "structure": "cell 1: icon image; cell 2: link whose text is the label (e.g. 'Download Templates'). The icon becomes part of the same link"
   },
   "options": [],
-  "memberVariantIds": ["cards-icon-links"],
-  "usage": "Utility/quick-access links (downloads, catalogs, contact) in a light band.",
+  "memberVariantIds": [
+    "cards-icon-links"
+  ],
+  "usage": {
+    "description": "Utility/quick-access links (downloads, catalogs, contact) in a light band.",
+    "pagesUsing": [
+      "/en/why-lcn"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-11"
+  },
   "reuseGuidance": "Use for short icon + label links. For image cards with a description use cards-solutions or cards."
 }

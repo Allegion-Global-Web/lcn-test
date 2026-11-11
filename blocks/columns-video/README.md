@@ -10,7 +10,13 @@ Single block table. Content: one row, two cells: cell 1 heading, subheading, par
 
 ## Supported variations
 
-No variations.
+No authored variations. Looks are picked from the content:
+
+- video link present: full-bleed text + click-to-play poster (homepage).
+- no video link: `columns-video-static` is added; text and a plain photo in the
+  container column (30px gutter). With the text cell first it lays out as the
+  content of a grey card (e.g. `card, dark-blue` section); with the image cell
+  first (`columns-video-media-first`) the photo sits left of the text.
 
 ## Universal Editor fields
 

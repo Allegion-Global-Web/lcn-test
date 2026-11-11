@@ -11,7 +11,16 @@
     "structure": "one row, two cells: cell 1 heading, subheading, paragraph, CTA link; cell 2 poster image plus a YouTube/Vimeo link (the image may be linked directly). Without a video link the image renders as a plain image"
   },
   "options": [],
-  "memberVariantIds": ["columns-video"],
-  "usage": "Text beside a click-to-play video.",
+  "memberVariantIds": [
+    "columns-video"
+  ],
+  "usage": {
+    "description": "Text beside a click-to-play video.",
+    "pagesUsing": [
+      "/en/why-lcn"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-11"
+  },
   "reuseGuidance": "Use when one column is a video poster. For text beside a stat graphic use columns-stat; for a tiled grid use columns-mosaic."
 }

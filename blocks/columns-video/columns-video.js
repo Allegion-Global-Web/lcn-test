@@ -95,4 +95,11 @@ export default function decorate(block) {
       else setupText(col);
     });
   });
+
+  // no video link anywhere: a plain image beside text (styled as its own look)
+  if (!block.querySelector(`.${BLOCK}-poster`)) block.classList.add(`${BLOCK}-static`);
+  // image cell authored first: image left, text right
+  if (firstRow.firstElementChild?.classList.contains(`${BLOCK}-media`)) {
+    block.classList.add(`${BLOCK}-media-first`);
+  }
 }

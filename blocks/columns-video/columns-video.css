@@ -5,8 +5,11 @@
  * (product image offset), 1920px (wide padding).
  */
 
-/* full-bleed: the source band spans the viewport, not the 1200px content column */
-main .section > .columns-video-wrapper {
+/*
+ * full-bleed: the source video band spans the viewport, not the 1200px content
+ * column (static looks keep the section's content column)
+ */
+main .section > .columns-video-wrapper:has(> .columns-video:not(.columns-video-static)) {
   max-width: none;
   padding: 0;
 }
@@ -211,5 +214,147 @@ main .columns-video .columns-video-cta a:focus-visible {
 @media (width >= 1920px) {
   .columns-video .columns-video-text {
     padding: 115px 80px 50px 393px;
+  }
+}
+
+/*
+ * static looks (no video link; lcnclosers.com/en/why-lcn): text beside a plain
+ * photo inside the bootstrap container (720 / 940 / 1140px from 768 / 992 / 1200px).
+ * - text first ("Why LCN" intro): the block is the grey card's content; 10px card
+ *   inset on phones (none on the right), 30px / 20px from 768px, 30px column gutter
+ * - image first ("Our Story"): image left, text right, 30px column gutter
+ * Source heading sizes step at 821px and 1282px.
+ */
+.columns-video.columns-video-static {
+  box-sizing: border-box;
+  max-width: var(--container-width);
+  margin-inline: auto;
+}
+
+.columns-video.columns-video-static:not(.columns-video-media-first) {
+  padding: 10px 0 10px 10px;
+}
+
+.columns-video.columns-video-static .columns-video-text {
+  padding: 0;
+  color: var(--text-color);
+}
+
+.columns-video.columns-video-static:not(.columns-video-media-first) .columns-video-text {
+  padding: 20px 20px 20px 10px;
+}
+
+.columns-video.columns-video-static .columns-video-text h1 {
+  margin: 10px 0;
+  color: var(--text-color);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.columns-video.columns-video-static .columns-video-text h2 {
+  margin: 20px 0 10px;
+  color: var(--brand-blue);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.columns-video.columns-video-static .columns-video-text h3 {
+  margin: 10px 0;
+  color: var(--brand-blue);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.columns-video.columns-video-static .columns-video-text p {
+  color: var(--text-color);
+}
+
+.columns-video.columns-video-static .columns-video-text p.columns-video-cta {
+  margin: 0;
+}
+
+/* brand-blue "Let's Work Together" CTA (source: .button__default--blue) */
+main .columns-video.columns-video-static .columns-video-cta a:any-link {
+  border: 2px solid var(--brand-blue);
+  background-color: var(--brand-blue);
+  color: #fff;
+  white-space: normal;
+}
+
+main .columns-video.columns-video-static .columns-video-cta a:hover,
+main .columns-video.columns-video-static .columns-video-cta a:focus-visible {
+  background-color: #4cbbe9;
+  color: #fff;
+}
+
+/* the card photo keeps a 3% right inset and 10px below on phones */
+.columns-video.columns-video-static:not(.columns-video-media-first) .columns-video-media img {
+  width: 97%;
+  margin-bottom: 10px;
+}
+
+@media (width >= 768px) {
+  .columns-video.columns-video-static > div {
+    gap: 30px;
+  }
+
+  .columns-video.columns-video-static > div > div {
+    flex: 0 0 calc(50% - 15px);
+  }
+
+  .columns-video.columns-video-static:not(.columns-video-media-first) {
+    padding: 30px 20px;
+  }
+
+  .columns-video.columns-video-static:not(.columns-video-media-first) .columns-video-text {
+    padding: 20px;
+  }
+
+  main .columns-video.columns-video-static .columns-video-cta a:any-link {
+    white-space: nowrap;
+  }
+
+  .columns-video.columns-video-static .columns-video-media img,
+  .columns-video.columns-video-static:not(.columns-video-media-first) .columns-video-media img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+@media (width >= 821px) {
+  .columns-video.columns-video-static .columns-video-text h1 {
+    font-size: 60px;
+  }
+
+  .columns-video.columns-video-static .columns-video-text h2 {
+    font-size: 51px;
+  }
+
+  .columns-video.columns-video-static .columns-video-text h3 {
+    font-size: 35px;
+  }
+}
+
+@media (width >= 1024px) {
+  .columns-video.columns-video-static:not(.columns-video-media-first) .columns-video-text {
+    padding: 58px 20px 0 50px;
+  }
+}
+
+@media (width >= 1282px) {
+  .columns-video.columns-video-static .columns-video-text h1 {
+    font-size: 65px;
+  }
+
+  .columns-video.columns-video-static .columns-video-text h2 {
+    font-size: 56px;
+  }
+
+  .columns-video.columns-video-static .columns-video-text h3 {
+    font-size: 40px;
   }
 }

@@ -19,9 +19,10 @@
     "pagesUsing": [
       "/en/index",
       "/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators",
-      "/en/solutions/by-market"
+      "/en/solutions/by-market",
+      "/en/why-lcn"
     ],
-    "reuseCount": 2,
+    "reuseCount": 3,
     "lastUsed": "2026-11-11"
   },
   "reuseGuidance": "Use for image-top cards linking to category pages. For icon + label quick links use cards-icon-links."

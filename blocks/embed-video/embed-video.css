@@ -1,0 +1,139 @@
+/*
+ * embed-video: 16:9 video embed with click-to-play poster.
+ * Source (lcnclosers.com why-lcn "LCN Performance"): the player sits in the
+ * bootstrap container column (1140 / 940 / 720px, full width below 768px)
+ * inset 15px each side, so 1110px wide at 1440 and 315px at 375.
+ * 30px above (an empty 20px paragraph + 10px margin follow the intro text)
+ * and 35px below (20px empty caption row + 15px bottom padding).
+ */
+
+.embed-video {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--container-width, 100%);
+  margin: 0 auto;
+  padding: 30px 15px 35px;
+}
+
+/* 16:9 box shared by the poster, the pending placeholder and the player */
+.embed-video .embed-video-stage,
+.embed-video .embed-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--dark-color);
+}
+
+.embed-video .embed-video-stage > .embed-video-frame {
+  position: absolute;
+  inset: 0;
+}
+
+.embed-video .embed-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-video .embed-video-poster {
+  position: absolute;
+  inset: 0;
+}
+
+.embed-video .embed-video-poster picture,
+.embed-video .embed-video-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.embed-video .embed-video-poster img {
+  object-fit: cover;
+}
+
+/* full-cover button so the whole poster is clickable */
+.embed-video .embed-video-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.embed-video .embed-video-play:focus-visible {
+  outline: 3px solid var(--brand-blue);
+  outline-offset: -3px;
+}
+
+.embed-video .embed-video-play-icon {
+  position: relative;
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: rgb(12 39 66 / 80%); /* --dark-color at 80% */
+  box-shadow: 0 0 0 2px var(--background-color);
+}
+
+.embed-video .embed-video-play-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 22px solid var(--background-color);
+  transform: translate(-35%, -50%);
+}
+
+/* YouTube: the source shows YouTube's own 68x48 red play button (no hover change) */
+.embed-video.embed-video-youtube .embed-video-play-icon {
+  width: 68px;
+  height: 48px;
+  border-radius: 14px / 12px;
+  background-color: rgb(255 16 63);
+  box-shadow: none;
+}
+
+.embed-video.embed-video-youtube .embed-video-play-icon::before {
+  top: 14px;
+  left: 27px;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-left-width: 18px;
+  transform: none;
+}
+
+.embed-video:not(.embed-video-youtube) .embed-video-play:hover .embed-video-play-icon,
+.embed-video:not(.embed-video-youtube) .embed-video-play:focus-visible .embed-video-play-icon {
+  background-color: var(--brand-blue);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .embed-video .embed-video-play-icon {
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  .embed-video:not(.embed-video-youtube) .embed-video-play:hover .embed-video-play-icon,
+  .embed-video:not(.embed-video-youtube) .embed-video-play:focus-visible .embed-video-play-icon {
+    transform: scale(1.08);
+  }
+}
+
+/* unsupported URL: plain link */
+.embed-video .embed-video-fallback {
+  margin: 0;
+}

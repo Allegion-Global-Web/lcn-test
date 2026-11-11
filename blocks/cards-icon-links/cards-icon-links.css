@@ -110,3 +110,86 @@
     max-width: 1140px;
   }
 }
+
+/*
+ * pillars look (icon + heading + description, no link; class set by block JS):
+ * source .textWithIcon -- icon float 30% / text 70%, green 600 heading, white copy
+ */
+main .cards-icon-links.cards-icon-links-pillars > ul > li {
+  align-items: flex-start;
+  margin-top: 0;
+  padding: 20px 0 15px 15px;
+}
+
+main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-image {
+  box-sizing: border-box;
+  flex: 0 0 30%;
+  padding: 50px 15px 0;
+}
+
+main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-image img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-body {
+  box-sizing: border-box;
+  flex: 0 0 70%;
+  margin-left: 0;
+  padding: 10px;
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-body > :is(h1, h2, h3, h4, h5, h6) {
+  margin: 20px 0 10px;
+  color: var(--accent-color);
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-body > p {
+  margin: 0 0 10px;
+  hyphens: auto;
+}
+
+@media (width >= 768px) {
+  main .cards-icon-links.cards-icon-links-pillars {
+    padding: 0;
+  }
+
+  main .cards-icon-links.cards-icon-links-pillars > ul > li {
+    padding: 20px 30px 0;
+  }
+
+  main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-image {
+    padding: 30px 0 0;
+  }
+
+  main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-body {
+    padding: 0 0 0 10px;
+    font-size: var(--body-font-size-m);
+    text-align: start;
+  }
+}
+
+@media (width > 1024px) {
+  main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-image {
+    padding: 20px 15px 0;
+  }
+
+  main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-body {
+    padding: 10px 0;
+  }
+
+  main .cards-icon-links.cards-icon-links-pillars .cards-icon-links-card-body > :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}

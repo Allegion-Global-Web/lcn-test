@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.lcnclosers.com/en/why-lcn.html",
+  "path": "en/why-lcn",
+  "timestamp": "2026-11-11T07:59:22.083Z",
+  "title": "About LCN | Why Choose Door Control Solutions from LCN?",
+  "template": "why-lcn",
+  "blocks": [
+    "columns-video",
+    "columns-video",
+    "cards-icon-links",
+    "embed-video",
+    "cards-solutions",
+    "columns-brands",
+    "hero-promo"
+  ],
+  "importScript": "b9d9c057b493"
+}

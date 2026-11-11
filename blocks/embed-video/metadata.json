@@ -1,0 +1,26 @@
+{
+  "variantName": "embed-video",
+  "baseBlock": "embed",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "purpose": "Full-width video player embedded in a content section",
+    "layout": "Single 16:9 responsive box spanning the content column; optional poster with a centred play button that swaps in the player on click",
+    "sourceSection": "LCN Performance"
+  },
+  "contentPattern": {
+    "structure": "one row, one cell: optional poster image, then a link to the video. Supported: YouTube (watch, shorts, embed, live, youtu.be; t/start honoured) via youtube-nocookie, and Vimeo (including unlisted hash) via player.vimeo.com. With a poster the player loads on click; without one it loads lazily when scrolled near. Link text (or the poster alt) becomes the iframe title. Any other URL renders as a plain link"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "embed-video"
+  ],
+  "usage": {
+    "description": "Standalone full-width YouTube or Vimeo video.",
+    "pagesUsing": [
+      "/en/why-lcn"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-11"
+  },
+  "reuseGuidance": "Use for a video on its own row (heading and text as default content above it). For text beside a video use columns-video."
+}

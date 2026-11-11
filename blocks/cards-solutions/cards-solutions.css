@@ -166,6 +166,15 @@ main .cards-solutions .cards-solutions-card-cta a:focus-visible {
 }
 
 /*
+ * CTA cards on a light band (block JS adds .cards-solutions-on-light when the section
+ * has no dark style/background; source why-lcn "Solutions Made Easy."): the source copy
+ * is black (rgb 0 0 0) instead of white; green accent line, frame and overlay unchanged
+ */
+.cards-solutions.cards-solutions-on-light .cards-solutions-card-body :is(h2, p) {
+  color: #000;
+}
+
+/*
  * "Related Products" look: cards without a CTA paragraph (block JS adds
  * .cards-solutions-related). Source .related-products: 1140px grey (#f2f2f3) box,
  * 5px top inset, 1em (mobile) / 100px side inset with a 1% right margin, cards
