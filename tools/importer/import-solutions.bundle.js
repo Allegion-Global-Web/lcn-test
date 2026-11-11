@@ -185,6 +185,11 @@ var CustomImportScript = (() => {
         "form.mktoForm",
         "#onetrust-consent-sdk",
         ".cmp-page__skiptomaincontent",
+        // Product detail chrome: back/share/print row, empty finish picker, empty ratings.
+        // Removed after parsing because the product intro section selector anchors on .upperRow.
+        ".default-product-detail-component .upperRow",
+        ".default-product-detail-component .finisheImgsRow",
+        ".default-product-detail-component .productRatingRow",
         // Decorative line-drawing section backgrounds left over after the hero parsers ran.
         'div.background-image > div[class*="backgroundImage"] > img'
       ]);
@@ -193,6 +198,11 @@ var CustomImportScript = (() => {
       });
       element.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((h) => {
         if (!h.textContent.trim() && !h.querySelector("img, picture")) h.remove();
+      });
+      element.querySelectorAll("a[href]").forEach((a) => {
+        const href = a.getAttribute("href");
+        const m = href.match(/^https?:\/\/(www\.)?lcnclosers\.com\/+(.*)$/i);
+        if (m) a.setAttribute("href", `/${m[2]}`);
       });
       element.querySelectorAll("*").forEach((el) => {
         [...el.attributes].forEach((attr) => {
@@ -286,7 +296,8 @@ var CustomImportScript = (() => {
   var PAGE_TEMPLATE = {
     "name": "solutions",
     "urls": [
-      "https://www.lcnclosers.com/en/solutions.html"
+      "https://www.lcnclosers.com/en/solutions.html",
+      "https://www.lcnclosers.com/en/resources.html"
     ],
     "representativeUrl": "https://www.lcnclosers.com/en/solutions.html",
     "description": "LCN solutions hub: page title, intro + stacked solution tiles on light grey, related brands on a blue gradient",

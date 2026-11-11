@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.lcnclosers.com/en/resources.html",
+  "path": "en/resources",
+  "timestamp": "2026-11-11T06:58:26.606Z",
+  "title": "Resources and Support | LCN Closers",
+  "template": "solutions",
+  "blocks": [
+    "cards-hub-tiles",
+    "cards-hub-tiles",
+    "cards-hub-tiles",
+    "cards-hub-tiles",
+    "cards-hub-tiles",
+    "columns-brands"
+  ],
+  "importScript": "b4eace8e259f"
+}

@@ -9,7 +9,8 @@ import lcnSectionsTransformer from './transformers/lcn-sections.js';
 const PAGE_TEMPLATE = {
   "name": "solutions",
   "urls": [
-    "https://www.lcnclosers.com/en/solutions.html"
+    "https://www.lcnclosers.com/en/solutions.html",
+    "https://www.lcnclosers.com/en/resources.html"
   ],
   "representativeUrl": "https://www.lcnclosers.com/en/solutions.html",
   "description": "LCN solutions hub: page title, intro + stacked solution tiles on light grey, related brands on a blue gradient",
