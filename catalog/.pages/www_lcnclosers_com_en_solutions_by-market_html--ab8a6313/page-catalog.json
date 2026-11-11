@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 2,
+  "url": "https://www.lcnclosers.com/en/solutions/by-market.html",
+  "title": "By Market | LCN Door Closer Solutions",
+  "timestamp": "2026-11-11T06:01:41.136Z",
+  "duration": "8.5s",
+  "cleanup": {
+    "elementsRemoved": 9,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0,
+    "removed": [
+      {
+        "selector": "#onetrust-banner-sdk",
+        "type": "overlay"
+      },
+      {
+        "selector": "#onetrust-style",
+        "type": "cookie-banner",
+        "rule": "[id*=\"onetrust\"]"
+      },
+      {
+        "selector": "#onetrust-consent-sdk",
+        "type": "cookie-banner",
+        "rule": "[id*=\"onetrust\"]"
+      },
+      {
+        "selector": "#searchModal",
+        "type": "popup",
+        "rule": "body [class*=\"modal\"]:not(nav *)"
+      }
+    ]
+  },
+  "snapshot": {
+    "html": "page.html",
+    "unresolvedSelectors": []
+  },
+  "images": [
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/white-alle-logo.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/ALLEGION-dropdown-logo-2.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/schlage-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/Von%20Duprin%20logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/ADSY-dropdown-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/brio-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/falcon-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/gj-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/isonas-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/von-duprin/logos/ives-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/locknetics-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/republic-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/Stanley_Access_Tech_Dropdown_Logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/steelcraft-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/TGPF-dropdown-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/TGPA-dropdown-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/zero-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/lcn-logo.svg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/home-page/LCN_Senior_Swing_Banner_1600x534_WP10573_No-Logo.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00220_HC_CE_871x291_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/LCN-OverheadConcealed_871x291.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00297_HC_871x291_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00029_HC_CE_871x291_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/LCN-HighSecurity_871x291.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00370_HC_871x291_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/by-role/LCN-ByRole_871x291.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00258_COM_871x291_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/resources-thumbnails/LCN-InstallationSetup_234x180.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/resources-thumbnails/LCN-Troubleshooting_234x180.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/resources-thumbnails/LCN-TrainingEducation_234x180.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/resources-thumbnails/LCN-AllegionServices_234x180.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/resources-thumbnails/LCN-Literature_234x180.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00256_EDU_337x275_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00201_EDU_CE_337x275_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00370_HC_337x275_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00339_MF_337x275_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00224_GVT_337x275_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00258_COM_450x330_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/images/00371_HC_450x330_72.jpg",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/footer/man-footer.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/lcn-logo.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/linkedin.png.thumb.1280.1280.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/facebook.png.thumb.1280.1280.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/von-duprin/logos/X-48px.jpg.thumb.1280.1280.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/youtube.png.thumb.1280.1280.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/logos/allegion-logo_181x47.png",
+      "type": "img"
+    },
+    {
+      "url": "https://www.lcnclosers.com/etc.clientlibs/us-commercial/clientlibs/lcn/clientlib-base-lcn/resources/login-persona.svg",
+      "type": "background"
+    },
+    {
+      "url": "https://www.lcnclosers.com/etc.clientlibs/us-commercial/clientlibs/lcn/clientlib-base-lcn/resources/nav-down-caret.svg",
+      "type": "background"
+    },
+    {
+      "url": "https://www.lcnclosers.com/content/dam/lcn/commons/Rectangle%20319.jpg",
+      "type": "background"
+    },
+    {
+      "url": "https://lp.allegion.com/js/forms2/images/arrow-down-bk.png",
+      "type": "background"
+    }
+  ],
+  "skeleton": {
+    "signature": "sB(s,s(s,s,sB(s(s,s),3x1,3x1),sB(s(s,s),2x1)),s(s,s,s,s))",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "body > div.cmp-page__skiptomaincontent",
+      "rc2": "#root-main",
+      "rc2c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(1)",
+      "rc2c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.contentcontainer.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c3": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+      "rc2c3c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.customrte.text",
+      "rc2c3c1c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.customrte.text > div.clearfix > h2",
+      "rc2c3c1c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.customrte.text > div.clearfix > p",
+      "rc2c3c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.columnselector:nth-of-type(2)",
+      "rc2c3c3": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.columnselector:nth-of-type(3)",
+      "rc2c4": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.background-image.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c4c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.background-image.aem-GridColumn.aem-GridColumn--default--12 > div.backgroundImageAWj7f1f79c1476c4c1384a8765a3e740ff0 > div.av-container.av-visible > div.allegion-container.fade-in-up-container.aniview.animated.fadeInUp > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.customrte.text",
+      "rc2c4c1c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.background-image.aem-GridColumn.aem-GridColumn--default--12 > div.backgroundImageAWj7f1f79c1476c4c1384a8765a3e740ff0 > div.av-container.av-visible > div.allegion-container.fade-in-up-container.aniview.animated.fadeInUp > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.customrte.text > div.clearfix > h3",
+      "rc2c4c1c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.background-image.aem-GridColumn.aem-GridColumn--default--12 > div.backgroundImageAWj7f1f79c1476c4c1384a8765a3e740ff0 > div.av-container.av-visible > div.allegion-container.fade-in-up-container.aniview.animated.fadeInUp > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.customrte.text > div.clearfix > h2",
+      "rc2c4c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.background-image.aem-GridColumn.aem-GridColumn--default--12 > div.backgroundImageAWj7f1f79c1476c4c1384a8765a3e740ff0 > div.av-container.av-visible > div.allegion-container.fade-in-up-container.aniview.animated.fadeInUp > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.columnselector",
+      "rc3": "body > div.xf-content-height:nth-of-type(4)",
+      "rc3c1": "body > div.xf-content-height:nth-of-type(4) > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.footer.aem-GridColumn.aem-GridColumn--default--12",
+      "rc3c2": "body > div.xf-content-height:nth-of-type(4) > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12",
+      "rc3c3": "body > div.xf-content-height:nth-of-type(4) > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+      "rc3c4": "body > div.xf-content-height:nth-of-type(4) > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "body > div.cmp-page__skiptomaincontent",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(1)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.contentcontainer.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#f2f2f3",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > div.clearfix.border__radius-none"
+      },
+      {
+        "id": "rc5",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.background-image.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": "url",
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc6",
+        "selector": "body > div.xf-content-height:nth-of-type(4) > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.footer.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc7",
+        "selector": "body > div.xf-content-height:nth-of-type(4) > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc8",
+        "selector": "body > div.xf-content-height:nth-of-type(4) > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc9",
+        "selector": "body > div.xf-content-height:nth-of-type(4) > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 164,
+      "height": 2021.234375
+    },
+    "splits": [],
+    "start": {
+      "kind": "paragraph"
+    }
+  },
+  "blocks": [
+    {
+      "id": "c04907b79c5e",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#root-main > div > div:nth-child(1)",
+      "bounds": {
+        "x": 0,
+        "y": 164,
+        "width": 1440,
+        "height": 50
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link"
+      },
+      "description": "allegion-container",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tk]",
+        "variantClean": "[Tk]"
+      },
+      "screenshot": "blocks/c04907b79c5e.jpg",
+      "html": "blocks/c04907b79c5e.html"
+    },
+    {
+      "id": "49e9e4057bb7",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#root-main > div > div.contentcontainer.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 214,
+        "width": 1440,
+        "height": 93
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "contentcontainer",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tck",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/49e9e4057bb7.html"
+    },
+    {
+      "id": "a5630add0679",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#root-main > div > div:nth-child(3) > div > div > div > div > div > div.customrte.text",
+      "bounds": {
+        "x": 150,
+        "y": 322,
+        "width": 1140,
+        "height": 93
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading + text"
+      },
+      "description": "customrte",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null,
+      "html": "blocks/a5630add0679.html"
+    },
+    {
+      "id": "2d5a61699f02",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#root-main > div > div:nth-child(3) > div > div > div > div > div > div:nth-child(2)",
+      "bounds": {
+        "x": 150,
+        "y": 415,
+        "width": 1140,
+        "height": 500
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading + text"
+      },
+      "description": "columnselector",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tk]",
+        "variantClean": "[Tk]",
+        "set": true
+      },
+      "screenshot": "blocks/2d5a61699f02.jpg",
+      "html": "blocks/2d5a61699f02.html"
+    },
+    {
+      "id": "a93a89610401",
+      "type": "columns",
+      "detectionTier": 1,
+      "selector": "#root-main > div > div:nth-child(3) > div > div > div > div > div > div:nth-child(3)",
+      "bounds": {
+        "x": 150,
+        "y": 915,
+        "width": 1140,
+        "height": 480
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading + text"
+      },
+      "description": "columnselector",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tk]",
+        "variantClean": "[Tk]"
+      },
+      "screenshot": "blocks/a93a89610401.jpg",
+      "html": "blocks/a93a89610401.html"
+    },
+    {
+      "id": "998850b38f81",
+      "type": "default-content",
+      "detectionTier": 1,
+      "selector": "#root-main > div > div.background-image.aem-GridColumn.aem-GridColumn--default--12 > div > div > div > div > div > div > div > div > div.customrte.text",
+      "bounds": {
+        "x": 150,
+        "y": 1429,
+        "width": 1140,
+        "height": 114
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "customrte",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tw"
+      },
+      "screenshot": null,
+      "html": "blocks/998850b38f81.html"
+    },
+    {
+      "id": "bedffc2bd151",
+      "type": "cards",
+      "detectionTier": 1,
+      "selector": "#root-main > div > div.background-image.aem-GridColumn.aem-GridColumn--default--12 > div > div > div > div > div > div > div > div > div.columnselector",
+      "bounds": {
+        "x": 150,
+        "y": 1543,
+        "width": 1140,
+        "height": 607
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading + text"
+      },
+      "description": "columnselector",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Twy]",
+        "variantClean": "[Tw]",
+        "set": true
+      },
+      "screenshot": "blocks/bedffc2bd151.jpg",
+      "html": "blocks/bedffc2bd151.html"
+    }
+  ]
+}

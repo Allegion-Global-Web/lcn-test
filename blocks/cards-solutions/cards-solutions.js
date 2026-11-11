@@ -169,6 +169,11 @@ export default function decorate(block) {
   if (ul.children.length && !ul.querySelector(`.${BLOCK}-card-cta`)) {
     block.classList.add(`${BLOCK}-related`);
     decorateCarousel(block, ul);
+  } else if (ul.children.length) {
+    // source column selector: one column per card (col-sm-6 for 2, col-sm-4 for 3), up to 4
+    const columns = Math.min(ul.children.length, 4);
+    block.classList.add(`${BLOCK}-cols-${columns}`);
+    block.style.setProperty(`--${BLOCK}-columns`, columns);
   }
 
   // whole card is clickable on source; keep real links/text selection working

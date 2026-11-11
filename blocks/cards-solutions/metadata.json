@@ -18,10 +18,11 @@
     "description": "Navigational cards splitting solutions by market, role or requirement.",
     "pagesUsing": [
       "/en/index",
-      "/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators"
+      "/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators",
+      "/en/solutions/by-market"
     ],
-    "reuseCount": 1,
-    "lastUsed": "2026-11-09"
+    "reuseCount": 2,
+    "lastUsed": "2026-11-11"
   },
   "reuseGuidance": "Use for image-top cards linking to category pages. For icon + label quick links use cards-icon-links."
 }

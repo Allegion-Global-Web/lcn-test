@@ -1,9 +1,9 @@
 {
   "analysis-urls-checklist": {
-    "captured": "2026-11-09T14:35:16.341Z",
-    "totalPages": 3,
+    "captured": "2026-11-11T06:01:32.326Z",
+    "totalPages": 4,
     "statusBreakdown": {
-      "analyzed": 3,
+      "analyzed": 4,
       "marked": 0
     },
     "pages": {
@@ -11,17 +11,21 @@
         "url": "https://www.lcnclosers.com/en/index.html",
         "status": "analyzed"
       },
+      "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html": {
+        "url": "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html",
+        "status": "analyzed"
+      },
       "https://www.lcnclosers.com/en/solutions.html": {
         "url": "https://www.lcnclosers.com/en/solutions.html",
         "status": "analyzed"
       },
-      "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html": {
-        "url": "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html",
+      "https://www.lcnclosers.com/en/solutions/by-market.html": {
+        "url": "https://www.lcnclosers.com/en/solutions/by-market.html",
         "status": "analyzed",
-        "analyzedAt": "2026-11-09T14:35:25.599Z",
-        "slug": "www_lcnclosers_com_en_products_automatic-door-operators_9500-2800-senior-swing-series-operators_html--a907c63e",
-        "title": "LCN 9500IQ/2800IQ Series Senior Swing Automatic Door Operators",
-        "blockCount": 10
+        "analyzedAt": "2026-11-11T06:01:41.168Z",
+        "slug": "www_lcnclosers_com_en_solutions_by-market_html--ab8a6313",
+        "title": "By Market | LCN Door Closer Solutions",
+        "blockCount": 7
       }
     }
   }

@@ -1,0 +1,17 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "Solution category pages (by market, by role): a grid of linked category cards, one per detail page",
+    "layout": "Image on top, small H4 title, description below; no CTA. Three cards per row from 768px, wrapping for any count; stacked full width below 768px (no carousel). The whole card is clickable via the title link",
+    "sourceSection": "Category Cards (solutions/by-market.html .columnselector rows), on a light-grey section"
+  },
+  "contentPattern": {
+    "structure": "one row per card (any count): cell 1 card image (optionally linked); cell 2 heading (H4) linked to the detail page, description paragraph. The heading link (or the first link in the card) becomes the whole-card link"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-category"],
+  "usage": "Solution category pages listing their detail pages as image cards with a short description (5 cards on by-market, 8 on by-role).",
+  "reuseGuidance": "Use for an image-top, no-CTA, 3-up wrapping grid of linked cards. For cards with a two-line heading and 'Go Now' CTA (or the related-products carousel) use cards-solutions; for full-width horizontal tiles use cards-hub-tiles; for icon + label quick links use cards-icon-links."
+}

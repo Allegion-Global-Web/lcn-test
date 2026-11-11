@@ -704,6 +704,37 @@ main .section.light-grey.cards-hub-tiles-container > .default-content-wrapper {
   padding-top: 15px;
 }
 
+/*
+ * category cards band (solution category pages): 15px top inset, no bottom padding
+ * (the cards carry their own 15px), intro copy on the 1140px source column, 30px/600 heading
+ */
+main .section.light-grey.cards-category-container {
+  padding: 15px 0 0;
+}
+
+main .section.light-grey.cards-category-container > .default-content-wrapper {
+  max-width: 1140px;
+}
+
+main .section.light-grey.cards-category-container > .default-content-wrapper h2 {
+  color: var(--text-color);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+/*
+ * "Other Solutions" band: 35px block inset; the source follows the heading with an empty
+ * h2 spacer (20 + 33 + 10), so the cards start 63px below the heading
+ */
+main .section.blue-gradient.cards-solutions-container {
+  padding: 35px 0;
+}
+
+main .section.blue-gradient.cards-solutions-container > .default-content-wrapper > h3:last-child {
+  margin-bottom: 63px;
+}
+
 @media (width >= 768px) {
   main > .section:first-child > .default-content-wrapper:only-child > h1:first-child {
     margin-inline: 30px;
@@ -716,6 +747,22 @@ main .section.light-grey.cards-hub-tiles-container > .default-content-wrapper {
   main .section.centered:not(.dark-blue, .blue-gradient) .default-content-wrapper h2 {
     padding: 0 30px;
     font-size: 4.2vw;
+  }
+}
+
+/*
+ * solution category pages: below 1024px the source title component drops its 15px
+ * top inset (63px band, title 20px from the top, 10px / 30px from the left edge)
+ */
+@media (width < 1024px) {
+  main:has(> .section.cards-category-container) > .section:first-child > .default-content-wrapper:only-child > h1:first-child {
+    margin: 20px -5px 10px;
+  }
+}
+
+@media (width >= 768px) and (width < 1024px) {
+  main:has(> .section.cards-category-container) > .section:first-child > .default-content-wrapper:only-child > h1:first-child {
+    margin-inline: 15px;
   }
 }
 

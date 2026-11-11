@@ -118,7 +118,7 @@ main .cards-solutions .cards-solutions-card-cta a:focus-visible {
 
 @media (width >= 768px) {
   .cards-solutions > ul {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(var(--cards-solutions-columns, 3), 1fr);
   }
 
   .cards-solutions .cards-solutions-card-body {
@@ -127,6 +127,41 @@ main .cards-solutions .cards-solutions-card-cta a:focus-visible {
 
   .cards-solutions .cards-solutions-card-body h2 {
     padding: 0;
+  }
+}
+
+/*
+ * two CTA cards ("Other Solutions", source by-market): bootstrap col-sm-6 columns
+ * with 15px gutters in a 1170px row, so cards are inset 15px (555px at 1440) and
+ * don't bleed on mobile, where the copy has a 35px side inset; the source image
+ * is capped at 530px and centred under the full-width hover overlay
+ */
+.cards-solutions.cards-solutions-cols-2 > ul > li {
+  margin-inline: 15px;
+}
+
+.cards-solutions.cards-solutions-cols-2 .cards-solutions-card-image img {
+  max-width: 530px;
+  margin-inline: auto;
+}
+
+.cards-solutions.cards-solutions-cols-2 .cards-solutions-card-body {
+  padding: 10px 35px;
+}
+
+/* these source paragraphs have no leading <br>: copy follows the title directly */
+.cards-solutions.cards-solutions-cols-2 .cards-solutions-card-body p {
+  padding-top: 0;
+}
+
+@media (width >= 768px) {
+  .cards-solutions.cards-solutions-cols-2 > ul {
+    max-width: 1170px;
+    margin-inline: auto;
+  }
+
+  .cards-solutions.cards-solutions-cols-2 .cards-solutions-card-body {
+    padding: 10px 15px;
   }
 }
 

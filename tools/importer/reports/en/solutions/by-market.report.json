@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.lcnclosers.com/en/solutions/by-market.html",
+  "path": "en/solutions/by-market",
+  "timestamp": "2026-11-11T06:13:55.495Z",
+  "title": "By Market | LCN Door Closer Solutions",
+  "template": "solution-category",
+  "blocks": [
+    "cards-category",
+    "cards-category",
+    "cards-solutions"
+  ],
+  "importScript": "72e612342fe0"
+}
