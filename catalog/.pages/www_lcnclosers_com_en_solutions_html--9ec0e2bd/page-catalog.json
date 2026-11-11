@@ -1,0 +1,353 @@
+{
+  "url": "https://www.lcnclosers.com/en/solutions.html",
+  "title": "Commercial Door Control Solutions | LCN Door Closers",
+  "timestamp": "2026-11-09T08:42:44.813Z",
+  "duration": "8.5s",
+  "cleanup": {
+    "elementsRemoved": 9,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0
+  },
+  "skeleton": {
+    "signature": "sB(s,s(s,s,sB(s,2x1B,2x1B,2x1B),sB(s,2x1B)),s(s,s,s,s))",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "body > div.cmp-page__skiptomaincontent",
+      "rc2": "#root-main",
+      "rc2c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(1)",
+      "rc2c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.contentcontainer.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c3": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+      "rc2c3c1": "#resources-container > div.container > div.row > div.col-xs-12 > div > div.allegion-container",
+      "rc2c3c2": "#resources-container > div.container > div.row > div.col-xs-12 > div > div.imageText.hubpage__tiles--view:nth-of-type(2)",
+      "rc2c3c3": "#resources-container > div.container > div.row > div.col-xs-12 > div > div.imageText.hubpage__tiles--view:nth-of-type(3)",
+      "rc2c3c4": "#resources-container > div.container > div.row > div.col-xs-12 > div > div.imageText.hubpage__tiles--view:nth-of-type(4)",
+      "rc2c4": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-xf.experiencefragment.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c4c1": "#simple-related-brands > div > div.row > div.col-xs-12 > div > div.customrte.text",
+      "rc2c4c2": "#simple-related-brands > div > div.row > div.col-xs-12 > div > div.allegion-container",
+      "rc3": "body > div.xf-content-height",
+      "rc3c1": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.footer.aem-GridColumn.aem-GridColumn--default--12",
+      "rc3c2": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12",
+      "rc3c3": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+      "rc3c4": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "body > div.cmp-page__skiptomaincontent",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(1)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.contentcontainer.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#f2f2f3",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#resources-container"
+      },
+      {
+        "id": "rc5",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-xf.experiencefragment.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": true,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": "url",
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc6",
+        "selector": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.footer.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc7",
+        "selector": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc8",
+        "selector": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc9",
+        "selector": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 164,
+      "height": 1738.796875
+    },
+    "splits": [],
+    "start": {
+      "kind": "paragraph"
+    }
+  },
+  "blocks": [
+    {
+      "id": "c04907b79c5e",
+      "type": "columns",
+      "selector": "#root-main > div > div:nth-child(1)",
+      "bounds": {
+        "x": 0,
+        "y": 164,
+        "width": 1440,
+        "height": 50
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list + link"
+      },
+      "description": "allegion-container",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tk]",
+        "variantClean": "[Tk]"
+      },
+      "screenshot": "blocks/c04907b79c5e.jpg"
+    },
+    {
+      "id": "49e9e4057bb7",
+      "type": "default-content",
+      "selector": "#root-main > div > div.contentcontainer.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 214,
+        "width": 1440,
+        "height": 93
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "contentcontainer",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tck",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "80abfffa9fe5",
+      "type": "default-content",
+      "selector": "#resources-container > div > div > div > div > div.allegion-container",
+      "bounds": {
+        "x": 150,
+        "y": 352,
+        "width": 1140,
+        "height": 80
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "text"
+      },
+      "description": "allegion-container",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "ba0e5c668089",
+      "type": "columns",
+      "selector": "#resources-container > div > div > div > div > div:nth-child(2)",
+      "bounds": {
+        "x": 150,
+        "y": 437,
+        "width": 1140,
+        "height": 275
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading + text"
+      },
+      "description": "imagetext",
+      "features": {
+        "skeleton": "~([T])",
+        "variant": "~k([T|Tw])",
+        "variantClean": "~k([T|Tw])"
+      },
+      "screenshot": "blocks/ba0e5c668089.jpg"
+    },
+    {
+      "id": "4d8cbeff383b",
+      "type": "columns",
+      "selector": "#resources-container > div > div > div > div > div:nth-child(3)",
+      "bounds": {
+        "x": 150,
+        "y": 717,
+        "width": 1140,
+        "height": 275
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading + text"
+      },
+      "description": "imagetext",
+      "features": {
+        "skeleton": "~([T])",
+        "variant": "~k([T|Tw])",
+        "variantClean": "~k([T|Tw])"
+      },
+      "screenshot": "blocks/4d8cbeff383b.jpg"
+    },
+    {
+      "id": "b1e167789793",
+      "type": "columns",
+      "selector": "#resources-container > div > div > div > div > div:nth-child(4)",
+      "bounds": {
+        "x": 150,
+        "y": 997,
+        "width": 1140,
+        "height": 275
+      },
+      "visualChars": {
+        "colorScheme": "dark",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading + text"
+      },
+      "description": "imagetext",
+      "features": {
+        "skeleton": "~([T])",
+        "variant": "~k([T|Tw])",
+        "variantClean": "~k([T|Tw])"
+      },
+      "screenshot": "blocks/b1e167789793.jpg"
+    },
+    {
+      "id": "f60af977d6a4",
+      "type": "default-content",
+      "selector": "#simple-related-brands > div > div > div > div > div.customrte.text",
+      "bounds": {
+        "x": 0,
+        "y": 1352,
+        "width": 1440,
+        "height": 61
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "customrte",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tw"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "654b26de1113",
+      "type": "columns",
+      "selector": "#simple-related-brands > div > div > div > div > div.allegion-container",
+      "bounds": {
+        "x": 0,
+        "y": 1443,
+        "width": 1440,
+        "height": 400
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + text"
+      },
+      "description": "allegion-container",
+      "features": {
+        "skeleton": "~([T])",
+        "variant": "~w([Tk])",
+        "variantClean": "~w([Tk])"
+      },
+      "screenshot": "blocks/654b26de1113.jpg"
+    }
+  ]
+}

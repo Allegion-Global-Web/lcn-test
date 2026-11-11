@@ -1,0 +1,547 @@
+{
+  "url": "https://www.lcnclosers.com/en/index.html",
+  "title": "LCN | Commercial Mechanical Door Closers & Door Control Solutions",
+  "timestamp": "2026-11-05T09:16:47.839Z",
+  "duration": "10.0s",
+  "cleanup": {
+    "elementsRemoved": 9,
+    "types": [
+      "overlay",
+      "cookie-banner",
+      "popup"
+    ],
+    "cookieConsentDismissed": true,
+    "lateConsentOverlaysRemoved": 0
+  },
+  "skeleton": {
+    "signature": "sB(s,s(2x1B,3x2B(5x1,2x1B),3x1B,s(2x1,sB(s(,),3x1),s(s(,),s,2x1,3x1),s(sB(,),2x1))),s(s,s,s,s))",
+    "nodeMap": {
+      "r": "body",
+      "rc1": "body > div.cmp-page__skiptomaincontent",
+      "rc2": "#root-main",
+      "rc2c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.background-image.aem-GridColumn.aem-GridColumn--default--12",
+      "rc2c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.av-container.av-visible",
+      "rc2c2c1": "#carousel-pgNcbe1a910f74a48fe9088ec7c19365735 > ol.carousel-indicators.no-show",
+      "rc2c2c2": "#carousel-pgNcbe1a910f74a48fe9088ec7c19365735 > div.carousel-inner",
+      "rc2c3": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+      "rc2c4": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+      "rc2c4c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.allegion-container",
+      "rc2c4c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.background-image",
+      "rc2c4c2c1": "#root-main > div > div:nth-of-type(4) > div > div > div > div > div > div:nth-of-type(2) > div > div > div > div > div > div > div > div:nth-of-type(1)",
+      "rc2c4c2c1c1": "#root-main > div > div:nth-of-type(4) > div > div > div > div > div > div:nth-of-type(2) > div > div > div > div > div > div > div > div:nth-of-type(1) > div > h3:nth-of-type(1)",
+      "rc2c4c2c1c2": "#contentcontainer_centered-container > div.row > div.col-xs-12 > div > div.customrte.text > div.clearfix > h3:nth-of-type(2)",
+      "rc2c4c2c2": "#contentcontainer_centered-container > div.row > div.col-xs-12 > div > div.columnselector",
+      "rc2c4c3": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.av-container.av-visible",
+      "rc2c4c3c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.av-container.av-visible > div.allegion-container.fade-in-up-container.aniview.animated.fadeInUp > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.contentcontainer:nth-of-type(1)",
+      "rc2c4c3c1c1": "#contentcontainer_centered-container > div.row > div.col-xs-12 > div > div.cmp.cmp-title",
+      "rc2c4c3c1c2": "#contentcontainer_centered-container > div.row > div.col-xs-12 > div > div.border-line",
+      "rc2c4c3c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.av-container.av-visible > div.allegion-container.fade-in-up-container.aniview.animated.fadeInUp > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.contentcontainer:nth-of-type(2)",
+      "rc2c4c3c3": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.av-container.av-visible > div.allegion-container.fade-in-up-container.aniview.animated.fadeInUp > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.columnselector.home_img--hover:nth-of-type(3)",
+      "rc2c4c3c4": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.av-container.av-visible > div.allegion-container.fade-in-up-container.aniview.animated.fadeInUp > div.clearfix.border__radius-none > div.container > div.row > div.col-xs-12 > div > div.columnselector.home_img--hover:nth-of-type(4)",
+      "rc2c4c4": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.allegion-xf.experiencefragment",
+      "rc2c4c4c1": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.allegion-xf.experiencefragment > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.av-container.av-visible",
+      "rc2c4c4c1c1": "#contentcontainer_top-container > div.row > div.col-xs-12 > div > div.allegion-container",
+      "rc2c4c4c1c2": "#contentcontainer_top-container > div.row > div.col-xs-12 > div > div.columnselector",
+      "rc2c4c4c2": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4) > div.clearfix > div > div.row > div.col-xs-12 > div > div.allegion-xf.experiencefragment > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.columnselector.aem-GridColumn.aem-GridColumn--default--12",
+      "rc3": "body > div.xf-content-height",
+      "rc3c1": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.footer.aem-GridColumn.aem-GridColumn--default--12",
+      "rc3c2": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12",
+      "rc3c3": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+      "rc3c4": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)"
+    },
+    "sections": [
+      {
+        "id": "rc1",
+        "selector": "body > div.cmp-page__skiptomaincontent",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc2",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.background-image.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": "2x1",
+        "hasBg": true,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": "url",
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc3",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.av-container.av-visible",
+        "layout": "3x2",
+        "hasBg": true,
+        "hint": "block",
+        "background": "#f2f2f3",
+        "backgroundImage": "url",
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc4",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+        "layout": "3x1",
+        "hasBg": true,
+        "hint": "block",
+        "background": "#f2f2f3",
+        "backgroundImage": null,
+        "colored": true,
+        "paintSelector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3) > div.clearfix.border__radius-none"
+      },
+      {
+        "id": "rc5",
+        "selector": "#root-main > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "block",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc6",
+        "selector": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.footer.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc7",
+        "selector": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.allegion-container.aem-GridColumn.aem-GridColumn--default--12",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc8",
+        "selector": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      },
+      {
+        "id": "rc9",
+        "selector": "body > div.xf-content-height > div.root.responsivegrid > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.html-component.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)",
+        "layout": null,
+        "hasBg": false,
+        "hint": "default-content",
+        "background": "#ffffff",
+        "backgroundImage": null,
+        "colored": false,
+        "paintSelector": null
+      }
+    ],
+    "invalidIgnore": []
+  },
+  "pageLayout": {
+    "box": {
+      "y": 164,
+      "height": 4448.796875
+    },
+    "splits": [
+      {
+        "selector": "div.carousel.slide > a.left.carousel-control, div.carousel.slide > a.right.carousel-control",
+        "sides": [
+          [
+            0,
+            0.03179650238473768
+          ],
+          [
+            0.9682034976152624,
+            1
+          ]
+        ],
+        "top": 982.53125,
+        "bottom": 1302.53125,
+        "cover": 0.07192955960705669,
+        "above": 1
+      }
+    ],
+    "start": {
+      "kind": "text on photo"
+    }
+  },
+  "blocks": [
+    {
+      "id": "810dbcb56e92",
+      "type": "columns",
+      "selector": "#root-main > div > div.background-image.aem-GridColumn.aem-GridColumn--default--12",
+      "bounds": {
+        "x": 0,
+        "y": 164,
+        "width": 1440,
+        "height": 629
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "large",
+        "hasGrid": true,
+        "structure": "heading + text + link + image"
+      },
+      "description": "background-image",
+      "features": {
+        "skeleton": "~@(T)",
+        "variant": "~@(Tbwy)",
+        "variantClean": "~@(Tw)"
+      },
+      "screenshot": "blocks/810dbcb56e92.jpg"
+    },
+    {
+      "id": "e5a0355f0ef3",
+      "type": "cards",
+      "selector": "#carousel-pgNcbe1a910f74a48fe9088ec7c19365735 > ol",
+      "bounds": {
+        "x": 693,
+        "y": 1303,
+        "width": 1482,
+        "height": 23
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "list"
+      },
+      "description": "carousel-indicators",
+      "features": {
+        "skeleton": "[tab]",
+        "variant": "[tab~k]",
+        "variantClean": "[tab~k]",
+        "set": true
+      },
+      "screenshot": "blocks/e5a0355f0ef3.jpg"
+    },
+    {
+      "id": "bc32f21203c8",
+      "type": "default-content",
+      "selector": "#carousel-pgNcbe1a910f74a48fe9088ec7c19365735 > a.left.carousel-control",
+      "bounds": {
+        "x": 90,
+        "y": 1120,
+        "width": 40,
+        "height": 137
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "link"
+      },
+      "description": "left",
+      "features": {
+        "skeleton": "tab",
+        "variant": "tab",
+        "variantClean": "tab"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "0c4997f725b1",
+      "type": "default-content",
+      "selector": "#carousel-pgNcbe1a910f74a48fe9088ec7c19365735 > a.right.carousel-control",
+      "bounds": {
+        "x": 1308,
+        "y": 1120,
+        "width": 40,
+        "height": 137
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "link"
+      },
+      "description": "right",
+      "features": {
+        "skeleton": "tab",
+        "variant": "tab",
+        "variantClean": "tab"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "828756d8a6fb",
+      "type": "columns",
+      "selector": "#carousel-pgNcbe1a910f74a48fe9088ec7c19365735 > div",
+      "bounds": {
+        "x": 150,
+        "y": 983,
+        "width": 1140,
+        "height": 320
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + text + link + image"
+      },
+      "description": "carousel-inner",
+      "features": {
+        "skeleton": "~([(T ~(T))*2.25|T])",
+        "variant": "~b([(Twy ~y(Ty))*2.25|T])",
+        "variantClean": "~b([(Tw ~y(Tw))*2.25|T])"
+      },
+      "screenshot": "blocks/828756d8a6fb.jpg"
+    },
+    {
+      "id": "feb1379fe452",
+      "type": "cards",
+      "selector": "#root-main > div > div:nth-child(3)",
+      "bounds": {
+        "x": 0,
+        "y": 1326,
+        "width": 1440,
+        "height": 195
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "allegion-container",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[T]",
+        "variantClean": "[T]",
+        "set": true
+      },
+      "screenshot": "blocks/feb1379fe452.jpg"
+    },
+    {
+      "id": "61206113fbfb",
+      "type": "columns",
+      "selector": "#root-main > div > div:nth-child(4) > div > div > div > div > div > div.allegion-container",
+      "bounds": {
+        "x": 0,
+        "y": 1521,
+        "width": 1440,
+        "height": 428
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "heading + text + link + image"
+      },
+      "description": "allegion-container",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Tbck|T]",
+        "variantClean": "[Tk|T]"
+      },
+      "screenshot": "blocks/61206113fbfb.jpg"
+    },
+    {
+      "id": "de679e6dc4fe",
+      "type": "default-content",
+      "selector": "#root-main > div > div:nth-of-type(4) > div > div > div > div > div > div:nth-of-type(2) > div > div > div > div > div > div > div > div:nth-of-type(1)",
+      "bounds": {
+        "x": 120,
+        "y": 2099,
+        "width": 1200,
+        "height": 112
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "customrte",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tw",
+        "variantClean": "Tw"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "8bdcda7800df",
+      "type": "cards",
+      "selector": "#contentcontainer_centered-container > div > div > div > div.columnselector",
+      "bounds": {
+        "x": 120,
+        "y": 2211,
+        "width": 1200,
+        "height": 563
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image + heading + text"
+      },
+      "description": "columnselector",
+      "features": {
+        "skeleton": "[T]",
+        "variant": "[Twy]",
+        "variantClean": "[Tw]",
+        "set": true
+      },
+      "screenshot": "blocks/8bdcda7800df.jpg"
+    },
+    {
+      "id": "c8e377239626",
+      "type": "default-content",
+      "selector": "#contentcontainer_centered-container > div > div > div > div.cmp.cmp-title",
+      "bounds": {
+        "x": 150,
+        "y": 2894,
+        "width": 1140,
+        "height": 67
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "heading"
+      },
+      "description": "cmp",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "de7e5c7475f9",
+      "type": "default-content",
+      "selector": "#root-main > div > div:nth-child(4) > div > div > div > div > div > div.av-container.av-visible > div > div > div > div > div > div > div:nth-child(2)",
+      "bounds": {
+        "x": 150,
+        "y": 3003,
+        "width": 1140,
+        "height": 161
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": false,
+        "structure": "link + image + text"
+      },
+      "description": "contentcontainer",
+      "features": {
+        "skeleton": "T",
+        "variant": "Tk",
+        "variantClean": "Tk"
+      },
+      "screenshot": null
+    },
+    {
+      "id": "6fca4aa4d557",
+      "type": "columns",
+      "selector": "#root-main > div > div:nth-child(4) > div > div > div > div > div > div.av-container.av-visible > div > div > div > div > div > div > div:nth-child(3)",
+      "bounds": {
+        "x": 150,
+        "y": 3164,
+        "width": 1140,
+        "height": 371
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "link + image"
+      },
+      "description": "columnselector",
+      "features": {
+        "skeleton": "[~(T)|~(T)*2]",
+        "variant": "[~b(T)|~c(T)*2]",
+        "variantClean": "[~b(T)|~c(T)*2]"
+      },
+      "screenshot": "blocks/6fca4aa4d557.jpg"
+    },
+    {
+      "id": "644c5839b9c9",
+      "type": "columns",
+      "selector": "#root-main > div > div:nth-child(4) > div > div > div > div > div > div.av-container.av-visible > div > div > div > div > div > div > div:nth-child(4)",
+      "bounds": {
+        "x": 150,
+        "y": 3535,
+        "width": 1140,
+        "height": 371
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "minimal",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + heading"
+      },
+      "description": "columnselector",
+      "features": {
+        "skeleton": "[~(T)|~@(T)]",
+        "variant": "[~b(T)|~@(Tw)]",
+        "variantClean": "[~b(T)|~@(Tw)]"
+      },
+      "screenshot": "blocks/644c5839b9c9.jpg"
+    },
+    {
+      "id": "abd0888d416b",
+      "type": "columns",
+      "selector": "#contentcontainer_top-container > div > div > div > div.columnselector",
+      "bounds": {
+        "x": -52,
+        "y": 4062,
+        "width": 1075,
+        "height": 350
+      },
+      "visualChars": {
+        "colorScheme": "light",
+        "density": "moderate",
+        "imagePattern": "noimg",
+        "hasGrid": true,
+        "structure": "image + heading + text + link"
+      },
+      "description": "columnselector",
+      "features": {
+        "skeleton": "[T*1.5|T]",
+        "variant": "[Tw*1.5|T]",
+        "variantClean": "[Tw*1.5|T]"
+      },
+      "screenshot": "blocks/abd0888d416b.jpg"
+    }
+  ],
+  "globalElements": {
+    "header": {
+      "selector": "#us-commercial-base-33812d2ca9 > div:nth-child(3)"
+    },
+    "footer": {
+      "selector": "div.footer.aem-GridColumn > div:nth-child(1)"
+    },
+    "isFirstCapture": true
+  }
+}

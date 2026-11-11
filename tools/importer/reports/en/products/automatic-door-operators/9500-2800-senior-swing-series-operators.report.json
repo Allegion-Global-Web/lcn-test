@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "https://www.lcnclosers.com/en/products/automatic-door-operators/9500-2800-senior-swing-series-operators.html",
+  "path": "en/products/automatic-door-operators/9500-2800-senior-swing-series-operators",
+  "timestamp": "2026-11-09T16:01:24.614Z",
+  "title": "LCN 9500IQ/2800IQ Series Senior Swing Automatic Door Operators",
+  "template": "product-detail",
+  "blocks": [
+    "carousel-gallery",
+    "cards-attributes",
+    "accordion-product",
+    "columns-cta-banner",
+    "cards-solutions",
+    "columns-stat",
+    "hero-promo"
+  ]
+}
